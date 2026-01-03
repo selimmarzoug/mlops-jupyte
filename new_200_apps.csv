@@ -1,0 +1,175 @@
+App,Category,Rating,Reviews,Size,Installs,Type,Price,Content Rating,Genres,Last Updated,Current Ver,Android Ver
+ChatGPT Plus Pro,PRODUCTIVITY,4.8,50000000,95M,1000000000+,Free,0,Everyone,Productivity,January 3 2026,5.0.0,7.0 and up
+Midjourney AI Art,ART_AND_DESIGN,4.7,25000000,185M,100000000+,Free,0,Everyone,Art & Design,January 3 2026,3.2.0,7.0 and up
+Notion AI Workspace,PRODUCTIVITY,4.6,18000000,125M,100000000+,Free,0,Everyone,Productivity,January 3 2026,2.5.0,6.0 and up
+Canva Pro Plus AI,ART_AND_DESIGN,4.8,35000000,225M,500000000+,Free,0,Everyone,Art & Design,January 3 2026,3.8.0,7.0 and up
+Grammarly Premium AI,PRODUCTIVITY,4.7,22000000,85M,100000000+,Free,0,Everyone,Productivity,January 3 2026,4.2.0,6.0 and up
+Claude AI Assistant,PRODUCTIVITY,4.9,15000000,75M,50000000+,Free,0,Everyone,Productivity,January 3 2026,1.5.0,7.0 and up
+Perplexity AI Search,PRODUCTIVITY,4.6,12000000,55M,50000000+,Free,0,Everyone,Productivity,January 3 2026,2.1.0,6.0 and up
+Character AI Plus,SOCIAL,4.5,20000000,95M,100000000+,Free,0,Teen,Social,January 3 2026,1.8.0,6.0 and up
+Jasper AI Writer,PRODUCTIVITY,4.4,8000000,68M,10000000+,Free,0,Everyone,Productivity,January 3 2026,3.0.0,7.0 and up
+Copy.ai Premium,PRODUCTIVITY,4.5,6000000,52M,10000000+,Free,0,Everyone,Productivity,January 3 2026,2.3.0,6.0 and up
+Lensa AI Editor,PHOTOGRAPHY,4.6,30000000,145M,500000000+,Free,0,Everyone,Photography,January 3 2026,4.5.0,7.0 and up
+RunwayML Video AI,VIDEO_PLAYERS,4.7,10000000,285M,10000000+,Free,0,Everyone,Video Players,January 3 2026,2.0.0,8.0 and up
+Synthesia AI Video,VIDEO_PLAYERS,4.5,5000000,195M,1000000+,Free,0,Everyone,Video Players,January 3 2026,1.7.0,7.0 and up
+Descript Audio Editor,MUSIC,4.6,8000000,175M,10000000+,Free,0,Everyone,Music & Audio,January 3 2026,5.2.0,7.0 and up
+ElevenLabs Voice AI,MUSIC,4.8,12000000,85M,50000000+,Free,0,Everyone,Music & Audio,January 3 2026,3.1.0,7.0 and up
+Stability AI Dream,ART_AND_DESIGN,4.7,15000000,225M,50000000+,Free,0,Everyone,Art & Design,January 3 2026,2.8.0,7.0 and up
+Hugging Face Chat,PRODUCTIVITY,4.6,7000000,95M,10000000+,Free,0,Everyone,Productivity,January 3 2026,1.9.0,6.0 and up
+Anthropic Claude,PRODUCTIVITY,4.9,18000000,125M,50000000+,Free,0,Everyone,Productivity,January 3 2026,2.4.0,7.0 and up
+Cohere Generate,PRODUCTIVITY,4.5,4000000,75M,1000000+,Free,0,Everyone,Productivity,January 3 2026,1.6.0,6.0 and up
+Replika AI Companion,SOCIAL,4.4,25000000,125M,100000000+,Free,0,Teen,Social,January 3 2026,10.5.0,6.0 and up
+BeReal Social Plus,SOCIAL,4.3,35000000,95M,500000000+,Free,0,Teen,Social,January 3 2026,8.2.0,6.0 and up
+Threads by Instagram,SOCIAL,4.5,100000000,85M,1000000000+,Free,0,Teen,Social,January 3 2026,320.0,6.0 and up
+Bluesky Social,SOCIAL,4.6,15000000,65M,50000000+,Free,0,Teen,Social,January 3 2026,1.75.0,6.0 and up
+Mastodon Client,SOCIAL,4.4,8000000,55M,10000000+,Free,0,Everyone,Social,January 3 2026,2.5.0,6.0 and up
+Substack Reader,NEWS_AND_MAGAZINES,4.7,12000000,75M,50000000+,Free,0,Everyone,News & Magazines,January 3 2026,3.8.0,6.0 and up
+Medium Premium Plus,NEWS_AND_MAGAZINES,4.5,18000000,85M,100000000+,Free,0,Everyone,News & Magazines,January 3 2026,5.2.0,6.0 and up
+Feedly Pro AI,NEWS_AND_MAGAZINES,4.6,10000000,68M,10000000+,Free,0,Everyone,News & Magazines,January 3 2026,120.0,6.0 and up
+Pocket Premium,NEWS_AND_MAGAZINES,4.5,15000000,52M,50000000+,Free,0,Everyone,News & Magazines,January 3 2026,8.5.0,6.0 and up
+Flipboard Magazine,NEWS_AND_MAGAZINES,4.4,20000000,95M,100000000+,Free,0,Everyone,News & Magazines,January 3 2026,4.3.0,6.0 and up
+Readwise Reader,BOOKS_AND_REFERENCE,4.8,5000000,75M,1000000+,Free,0,Everyone,Books & Reference,January 3 2026,2.7.0,6.0 and up
+Kindle Unlimited Plus,BOOKS_AND_REFERENCE,4.6,40000000,125M,500000000+,Free,0,Everyone,Books & Reference,January 3 2026,10.8.0,6.0 and up
+Audible Premium Plus,BOOKS_AND_REFERENCE,4.7,35000000,145M,100000000+,Free,0,Everyone,Books & Reference,January 3 2026,3.65.0,6.0 and up
+Scribd Unlimited,BOOKS_AND_REFERENCE,4.5,18000000,95M,50000000+,Free,0,Everyone,Books & Reference,January 3 2026,12.5.0,6.0 and up
+Goodreads Enhanced,BOOKS_AND_REFERENCE,4.6,25000000,85M,100000000+,Free,0,Everyone,Books & Reference,January 3 2026,3.28.0,6.0 and up
+Libby OverDrive Plus,BOOKS_AND_REFERENCE,4.8,15000000,75M,50000000+,Free,0,Everyone,Books & Reference,January 3 2026,5.8.0,6.0 and up
+Apple Music Classical,MUSIC,4.7,10000000,95M,10000000+,Free,0,Everyone,Music & Audio,January 3 2026,1.5.0,7.0 and up
+TIDAL HiFi Ultimate,MUSIC,4.6,12000000,125M,50000000+,Free,0,Everyone,Music & Audio,January 3 2026,2.92.0,6.0 and up
+Qobuz Studio Plus,MUSIC,4.5,4000000,85M,1000000+,Free,0,Everyone,Music & Audio,January 3 2026,7.8.0,6.0 and up
+Bandcamp Premium,MUSIC,4.7,8000000,68M,10000000+,Free,0,Everyone,Music & Audio,January 3 2026,3.6.0,6.0 and up
+SoundHound Music,MUSIC,4.5,15000000,75M,100000000+,Free,0,Everyone,Music & Audio,January 3 2026,10.2.0,6.0 and up
+YouTube TV Premium,VIDEO_PLAYERS,4.4,25000000,185M,100000000+,Free,0,Teen,Entertainment,January 3 2026,8.35.0,7.0 and up
+Paramount Plus Premium,VIDEO_PLAYERS,4.3,12000000,125M,50000000+,Free,0,Teen,Entertainment,January 3 2026,12.5.0,6.0 and up
+Peacock Premium Plus,VIDEO_PLAYERS,4.4,10000000,95M,50000000+,Free,0,Teen,Entertainment,January 3 2026,10.8.0,6.0 and up
+Discovery Plus Premium,VIDEO_PLAYERS,4.5,15000000,125M,50000000+,Free,0,Everyone,Entertainment,January 3 2026,45.0.0,6.0 and up
+Apple TV Plus Premium,VIDEO_PLAYERS,4.6,18000000,145M,50000000+,Free,0,Teen,Entertainment,January 3 2026,4.5.0,7.0 and up
+Crunchyroll Premium,VIDEO_PLAYERS,4.5,20000000,125M,100000000+,Free,0,Teen,Entertainment,January 3 2026,3.58.0,6.0 and up
+Funimation Premium,VIDEO_PLAYERS,4.4,12000000,95M,50000000+,Free,0,Teen,Entertainment,January 3 2026,3.3.0,6.0 and up
+VRV Premium,VIDEO_PLAYERS,4.3,5000000,85M,10000000+,Free,0,Teen,Entertainment,January 3 2026,2.8.0,6.0 and up
+Plex Pass Premium,VIDEO_PLAYERS,4.7,15000000,125M,50000000+,Free,0,Teen,Entertainment,January 3 2026,10.5.0,6.0 and up
+Jellyfin Client,VIDEO_PLAYERS,4.6,3000000,75M,1000000+,Free,0,Everyone,Video Players,January 3 2026,2.6.0,6.0 and up
+Strava Premium Plus,HEALTH_AND_FITNESS,4.7,25000000,145M,100000000+,Free,0,Everyone,Health & Fitness,January 3 2026,360.0,7.0 and up
+Zwift Fitness,HEALTH_AND_FITNESS,4.5,8000000,1250M,10000000+,Free,0,Everyone,Health & Fitness,January 3 2026,1.62.0,7.0 and up
+Whoop Recovery,HEALTH_AND_FITNESS,4.6,5000000,125M,1000000+,Free,0,Everyone,Health & Fitness,January 3 2026,4.8.0,7.0 and up
+Oura Ring App,HEALTH_AND_FITNESS,4.7,4000000,95M,1000000+,Free,0,Everyone,Health & Fitness,January 3 2026,4.15.0,7.0 and up
+Apple Fitness Plus,HEALTH_AND_FITNESS,4.6,12000000,185M,10000000+,Free,0,Everyone,Health & Fitness,January 3 2026,3.8.0,7.0 and up
+Les Mills Plus,HEALTH_AND_FITNESS,4.5,6000000,225M,10000000+,Free,0,Everyone,Health & Fitness,January 3 2026,3.2.0,7.0 and up
+Aaptiv Audio Fitness,HEALTH_AND_FITNESS,4.6,8000000,95M,10000000+,Free,0,Everyone,Health & Fitness,January 3 2026,7.5.0,6.0 and up
+Future Personal Training,HEALTH_AND_FITNESS,4.7,3000000,125M,1000000+,Free,0,Everyone,Health & Fitness,January 3 2026,5.2.0,7.0 and up
+Tonal Strength,HEALTH_AND_FITNESS,4.5,2000000,145M,500000+,Free,0,Everyone,Health & Fitness,January 3 2026,3.8.0,7.0 and up
+Mirror Fitness,HEALTH_AND_FITNESS,4.4,3000000,185M,500000+,Free,0,Everyone,Health & Fitness,January 3 2026,2.5.0,7.0 and up
+Noom Weight Loss,HEALTH_AND_FITNESS,4.3,15000000,125M,50000000+,Free,0,Everyone,Health & Fitness,January 3 2026,12.28.0,6.0 and up
+WW Weight Watchers,HEALTH_AND_FITNESS,4.4,12000000,145M,50000000+,Free,0,Everyone,Health & Fitness,January 3 2026,14.2.0,6.0 and up
+Lose It Premium,HEALTH_AND_FITNESS,4.6,10000000,95M,10000000+,Free,0,Everyone,Health & Fitness,January 3 2026,16.0.0,6.0 and up
+Lifesum Premium,HEALTH_AND_FITNESS,4.5,8000000,85M,10000000+,Free,0,Everyone,Health & Fitness,January 3 2026,22.5.0,6.0 and up
+Flo Period Tracker,HEALTH_AND_FITNESS,4.7,30000000,95M,100000000+,Free,0,Everyone,Health & Fitness,January 3 2026,11.28.0,6.0 and up
+Clue Period Calendar,HEALTH_AND_FITNESS,4.6,20000000,75M,50000000+,Free,0,Everyone,Health & Fitness,January 3 2026,7.5.0,6.0 and up
+BetterHelp Therapy,MEDICAL,4.5,18000000,125M,50000000+,Free,0,Everyone,Medical,January 3 2026,8.7.0,6.0 and up
+Talkspace Therapy,MEDICAL,4.4,12000000,95M,10000000+,Free,0,Everyone,Medical,January 3 2026,6.5.0,6.0 and up
+Cerebral Mental Health,MEDICAL,4.3,8000000,85M,10000000+,Free,0,Everyone,Medical,January 3 2026,4.2.0,6.0 and up
+K Health Doctor,MEDICAL,4.6,10000000,125M,10000000+,Free,0,Everyone,Medical,January 3 2026,5.8.0,6.0 and up
+Teladoc Health,MEDICAL,4.5,15000000,145M,50000000+,Free,0,Everyone,Medical,January 3 2026,7.5.0,6.0 and up
+MDLive Telehealth,MEDICAL,4.4,8000000,95M,10000000+,Free,0,Everyone,Medical,January 3 2026,5.2.0,6.0 and up
+Doctor On Demand,MEDICAL,4.5,10000000,125M,10000000+,Free,0,Everyone,Medical,January 3 2026,6.8.0,6.0 and up
+GoodRx Prescription,MEDICAL,4.7,20000000,85M,100000000+,Free,0,Everyone,Medical,January 3 2026,9.5.0,6.0 and up
+Ro Health Telehealth,MEDICAL,4.6,6000000,95M,1000000+,Free,0,Everyone,Medical,January 3 2026,3.8.0,6.0 and up
+Hims Mens Health,MEDICAL,4.5,8000000,75M,10000000+,Free,0,Everyone,Medical,January 3 2026,4.5.0,6.0 and up
+NerdWallet Finance,FINANCE,4.6,15000000,95M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.25.0,6.0 and up
+Personal Capital,FINANCE,4.7,10000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,4.8.0,6.0 and up
+Acorns Investing,FINANCE,4.5,12000000,85M,50000000+,Free,0,Everyone,Finance,January 3 2026,9.7.0,6.0 and up
+Betterment Investing,FINANCE,4.6,8000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.5.0,6.0 and up
+Wealthfront Invest,FINANCE,4.7,10000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.8.0,7.0 and up
+M1 Finance,FINANCE,4.5,6000000,85M,1000000+,Free,0,Everyone,Finance,January 3 2026,4.2.0,6.0 and up
+SoFi Money,FINANCE,4.6,15000000,125M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.45.0,6.0 and up
+Chime Banking,FINANCE,4.5,25000000,95M,100000000+,Free,0,Everyone,Finance,January 3 2026,12.5.0,6.0 and up
+Dave Banking App,FINANCE,4.3,12000000,75M,10000000+,Free,0,Everyone,Finance,January 3 2026,10.8.0,6.0 and up
+Current Banking,FINANCE,4.4,10000000,85M,10000000+,Free,0,Everyone,Finance,January 3 2026,9.2.0,6.0 and up
+Varo Bank,FINANCE,4.5,8000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.7.0,6.0 and up
+Ally Mobile Banking,FINANCE,4.6,15000000,125M,50000000+,Free,0,Everyone,Finance,January 3 2026,7.8.0,6.0 and up
+Marcus by Goldman,FINANCE,4.7,6000000,85M,1000000+,Free,0,Everyone,Finance,January 3 2026,4.5.0,6.0 and up
+Discover Mobile,FINANCE,4.6,12000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,9.3.0,6.0 and up
+Capital One Mobile,FINANCE,4.5,20000000,125M,100000000+,Free,0,Everyone,Finance,January 3 2026,10.2.0,6.0 and up
+Chase Mobile Banking,FINANCE,4.6,35000000,145M,100000000+,Free,0,Everyone,Finance,January 3 2026,6.85.0,6.0 and up
+Bank of America,FINANCE,4.4,30000000,125M,100000000+,Free,0,Everyone,Finance,January 3 2026,28.0.0,6.0 and up
+Wells Fargo Mobile,FINANCE,4.3,25000000,145M,100000000+,Free,0,Everyone,Finance,January 3 2026,7.15.0,6.0 and up
+Citibank Mobile,FINANCE,4.5,18000000,125M,50000000+,Free,0,Everyone,Finance,January 3 2026,5.68.0,6.0 and up
+US Bank Mobile,FINANCE,4.4,15000000,95M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.5.0,6.0 and up
+PNC Mobile Banking,FINANCE,4.5,12000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,7.25.0,6.0 and up
+TD Bank Mobile,FINANCE,4.4,10000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.8.0,6.0 and up
+Truist Mobile,FINANCE,4.3,8000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.2.0,6.0 and up
+Fifth Third Mobile,FINANCE,4.4,6000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,4.8.0,6.0 and up
+KeyBank Mobile,FINANCE,4.5,5000000,85M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.9.0,6.0 and up
+Regions Mobile,FINANCE,4.3,7000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.3.0,6.0 and up
+Huntington Mobile,FINANCE,4.4,6000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,4.7.0,6.0 and up
+Citizens Bank Mobile,FINANCE,4.5,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.8.0,6.0 and up
+BMO Mobile Banking,FINANCE,4.4,8000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.2.0,6.0 and up
+HSBC Mobile Banking,FINANCE,4.3,10000000,145M,50000000+,Free,0,Everyone,Finance,January 3 2026,7.5.0,6.0 and up
+Barclays Mobile,FINANCE,4.5,6000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.8.0,6.0 and up
+Standard Chartered,FINANCE,4.4,8000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.3.0,6.0 and up
+DBS DigiBank,FINANCE,4.6,12000000,95M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.7.0,6.0 and up
+OCBC Digital,FINANCE,4.5,8000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.9.0,6.0 and up
+UOB Mighty,FINANCE,4.4,7000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,4.8.0,6.0 and up
+ANZ Mobile Banking,FINANCE,4.5,10000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,7.2.0,6.0 and up
+Westpac Mobile,FINANCE,4.4,8000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.5.0,6.0 and up
+Commonwealth Bank,FINANCE,4.6,15000000,145M,50000000+,Free,0,Everyone,Finance,January 3 2026,9.8.0,6.0 and up
+NAB Mobile Banking,FINANCE,4.5,10000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,7.5.0,6.0 and up
+Rabobank Mobile,FINANCE,4.4,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,4.2.0,6.0 and up
+ING Mobile Banking,FINANCE,4.6,12000000,125M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.3.0,6.0 and up
+BNP Paribas Mobile,FINANCE,4.3,8000000,145M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.7.0,6.0 and up
+Societe Generale,FINANCE,4.4,7000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.8.0,6.0 and up
+Credit Agricole,FINANCE,4.5,10000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,7.2.0,6.0 and up
+Deutsche Bank Mobile,FINANCE,4.3,6000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.3.0,6.0 and up
+Commerzbank Mobile,FINANCE,4.4,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,4.5.0,6.0 and up
+Santander Mobile,FINANCE,4.5,15000000,125M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.7.0,6.0 and up
+BBVA Mobile Banking,FINANCE,4.4,12000000,145M,50000000+,Free,0,Everyone,Finance,January 3 2026,7.8.0,6.0 and up
+CaixaBank Mobile,FINANCE,4.5,8000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.2.0,6.0 and up
+Revolut Business,FINANCE,4.6,20000000,145M,100000000+,Free,0,Everyone,Finance,January 3 2026,10.35.0,6.0 and up
+N26 You,FINANCE,4.5,15000000,95M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.58.0,6.0 and up
+Monzo Plus,FINANCE,4.6,10000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,5.62.0,6.0 and up
+Starling Bank,FINANCE,4.7,8000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,4.28.0,6.0 and up
+Wise Transfer,FINANCE,4.6,25000000,125M,100000000+,Free,0,Everyone,Finance,January 3 2026,12.5.0,6.0 and up
+Remitly Money Transfer,FINANCE,4.5,12000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,8.3.0,6.0 and up
+WorldRemit Transfer,FINANCE,4.4,10000000,85M,10000000+,Free,0,Everyone,Finance,January 3 2026,7.2.0,6.0 and up
+Xoom Money Transfer,FINANCE,4.5,15000000,95M,50000000+,Free,0,Everyone,Finance,January 3 2026,9.5.0,6.0 and up
+Western Union Money,FINANCE,4.3,20000000,125M,100000000+,Free,0,Everyone,Finance,January 3 2026,8.7.0,6.0 and up
+MoneyGram Transfer,FINANCE,4.4,12000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,7.8.0,6.0 and up
+Remitano Crypto,FINANCE,4.5,6000000,85M,1000000+,Free,0,Everyone,Finance,January 3 2026,4.5.0,6.0 and up
+Paxful Bitcoin,FINANCE,4.4,8000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.3.0,6.0 and up
+LocalBitcoins Trade,FINANCE,4.3,5000000,75M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.8.0,6.0 and up
+Bisq Exchange,FINANCE,4.6,3000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,1.9.0,7.0 and up
+Exodus Wallet Pro,FINANCE,4.7,10000000,145M,10000000+,Free,0,Everyone,Finance,January 3 2026,24.1.0,6.0 and up
+Atomic Wallet Plus,FINANCE,4.5,8000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,2.75.0,6.0 and up
+Trust Wallet Pro,FINANCE,4.6,15000000,95M,50000000+,Free,0,Everyone,Finance,January 3 2026,8.14.0,6.0 and up
+Ledger Live Plus,FINANCE,4.7,12000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,2.75.0,7.0 and up
+Trezor Suite,FINANCE,4.6,5000000,145M,1000000+,Free,0,Everyone,Finance,January 3 2026,24.1.0,7.0 and up
+MetaMask Wallet,FINANCE,4.5,30000000,95M,100000000+,Free,0,Everyone,Finance,January 3 2026,7.14.0,6.0 and up
+Phantom Wallet,FINANCE,4.7,8000000,85M,10000000+,Free,0,Everyone,Finance,January 3 2026,24.1.0,6.0 and up
+Rainbow Wallet,FINANCE,4.6,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,1.9.0,7.0 and up
+Argent Wallet DeFi,FINANCE,4.5,6000000,125M,1000000+,Free,0,Everyone,Finance,January 3 2026,5.28.0,6.0 and up
+Zerion DeFi Wallet,FINANCE,4.6,4000000,95M,500000+,Free,0,Everyone,Finance,January 3 2026,3.8.0,7.0 and up
+1inch Wallet DEX,FINANCE,4.5,7000000,125M,10000000+,Free,0,Everyone,Finance,January 3 2026,6.4.0,6.0 and up
+Uniswap Wallet,FINANCE,4.6,10000000,95M,10000000+,Free,0,Everyone,Finance,January 3 2026,1.3.0,7.0 and up
+PancakeSwap Mobile,FINANCE,4.4,8000000,85M,10000000+,Free,0,Everyone,Finance,January 3 2026,3.75.0,6.0 and up
+SushiSwap Mobile,FINANCE,4.3,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,2.8.0,6.0 and up
+Curve Finance App,FINANCE,4.5,4000000,125M,1000000+,Free,0,Everyone,Finance,January 3 2026,1.9.0,7.0 and up
+Balancer App,FINANCE,4.4,3000000,95M,500000+,Free,0,Everyone,Finance,January 3 2026,1.5.0,6.0 and up
+Yearn Finance,FINANCE,4.6,5000000,125M,1000000+,Free,0,Everyone,Finance,January 3 2026,2.3.0,7.0 and up
+Aave DeFi Platform,FINANCE,4.5,6000000,145M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.2.0,7.0 and up
+Compound Finance,FINANCE,4.6,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,2.8.0,6.0 and up
+MakerDAO Mobile,FINANCE,4.5,4000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,2.1.0,7.0 and up
+Instadapp DeFi,FINANCE,4.4,3000000,95M,500000+,Free,0,Everyone,Finance,January 3 2026,1.7.0,6.0 and up
+DeFi Saver,FINANCE,4.6,3000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,2.5.0,7.0 and up
+Zapper Finance,FINANCE,4.5,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.2.0,6.0 and up
+DeBank Portfolio,FINANCE,4.6,4000000,85M,1000000+,Free,0,Everyone,Finance,January 3 2026,2.8.0,6.0 and up
+Rotki Portfolio,FINANCE,4.4,2000000,145M,500000+,Free,0,Everyone,Finance,January 3 2026,1.9.0,7.0 and up
+Accointing Tax,FINANCE,4.5,3000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,2.3.0,6.0 and up
+Koinly Tax Report,FINANCE,4.6,5000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.7.0,6.0 and up
+CoinTracker Tax,FINANCE,4.5,6000000,125M,1000000+,Free,0,Everyone,Finance,January 3 2026,4.2.0,6.0 and up
+TokenTax Report,FINANCE,4.4,3000000,95M,500000+,Free,0,Everyone,Finance,January 3 2026,2.5.0,6.0 and up
+ZenLedger Crypto Tax,FINANCE,4.5,4000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,3.1.0,6.0 and up
+CryptoTaxCalculator,FINANCE,4.6,3000000,95M,500000+,Free,0,Everyone,Finance,January 3 2026,2.8.0,6.0 and up
+Recap Crypto Tax,FINANCE,4.4,2000000,85M,100000+,Free,0,Everyone,Finance,January 3 2026,1.9.0,6.0 and up
+Blockpit Tax,FINANCE,4.5,3000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,2.4.0,6.0 and up
+TaxBit Platform,FINANCE,4.6,4000000,95M,1000000+,Free,0,Everyone,Finance,January 3 2026,3.2.0,6.0 and up
+CoinLedger Tax,FINANCE,4.5,3000000,125M,500000+,Free,0,Everyone,Finance,January 3 2026,2.7.0,6.0 and up

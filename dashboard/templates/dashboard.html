@@ -269,32 +269,37 @@
             <div class="card">
                 <h2>Métriques de Performance</h2>
                 
-                {% if model.metrics %}
+                {% if model.metrics and model.metrics.get('accuracy') %}
+                {% set accuracy = model.metrics.get('accuracy', 0) %}
+                {% set precision = model.metrics.get('precision', 0) %}
+                {% set recall = model.metrics.get('recall', 0) %}
+                {% set f1 = model.metrics.get('f1_score', 0) %}
+                
                 <div class="metric-row">
                     <span class="metric-label">Accuracy</span>
-                    <span class="metric-value {% if model.metrics.accuracy >= 0.85 %}good{% elif model.metrics.accuracy >= 0.75 %}medium{% else %}bad{% endif %}">
-                        {{ "%.2f%%"|format(model.metrics.accuracy * 100) }}
+                    <span class="metric-value {% if accuracy >= 0.85 %}good{% elif accuracy >= 0.75 %}medium{% else %}bad{% endif %}">
+                        {{ "%.2f%%"|format(accuracy * 100) }}
                     </span>
                 </div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: {{ model.metrics.accuracy * 100 }}%">
-                        {{ "%.0f%%"|format(model.metrics.accuracy * 100) }}
+                    <div class="progress-fill" style="width: {{ (accuracy * 100)|int }}%;">
+                        {{ "%.0f%%"|format(accuracy * 100) }}
                     </div>
                 </div>
                 
                 <div class="metric-row">
                     <span class="metric-label">Precision</span>
-                    <span class="metric-value">{{ "%.2f%%"|format(model.metrics.precision * 100) }}</span>
+                    <span class="metric-value">{{ "%.2f%%"|format(precision * 100) }}</span>
                 </div>
                 
                 <div class="metric-row">
                     <span class="metric-label">Recall</span>
-                    <span class="metric-value">{{ "%.2f%%"|format(model.metrics.recall * 100) }}</span>
+                    <span class="metric-value">{{ "%.2f%%"|format(recall * 100) }}</span>
                 </div>
                 
                 <div class="metric-row">
                     <span class="metric-label">F1-Score</span>
-                    <span class="metric-value">{{ "%.2f%%"|format(model.metrics.f1_score * 100) }}</span>
+                    <span class="metric-value">{{ "%.2f%%"|format(f1 * 100) }}</span>
                 </div>
                 {% else %}
                 <p style="color: #666; text-align: center; margin-top: 20px;">
