@@ -398,19 +398,34 @@
         {% endif %}
         
         <p class="timestamp" id="lastUpdate">
-            Dernière mise à jour: {{ "now"|datetime }}
+            Dernière mise à jour: <span id="currentTime"></span>
         </p>
     </div>
     
     <script>
+        // Mettre à jour l'heure actuelle
+        function updateTime() {
+            const now = new Date().toLocaleString('fr-FR', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('currentTime').textContent = now;
+        }
+        
+        // Mettre à jour immédiatement
+        updateTime();
+        
         function refreshData() {
             location.reload();
         }
         
         // Auto-refresh toutes les 30 secondes
         setInterval(() => {
-            document.getElementById('lastUpdate').textContent = 
-                'Dernière mise à jour: ' + new Date().toLocaleString('fr-FR');
+            updateTime();
         }, 30000);
     </script>
 </body>
