@@ -1,0 +1,9 @@
+pyspark==3.5.1
+mlflow
+psycopg2-binary
+pandas
+scikit-learn
+matplotlib
+seaborn
+plotly
+cufflinks

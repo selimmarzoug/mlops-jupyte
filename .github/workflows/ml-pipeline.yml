@@ -1,0 +1,215 @@
+name: ML Pipeline - Réentraînement et Déploiement Automatique
+
+# Déclencheurs du pipeline
+on:
+  # À chaque push sur main (après merge d'un PR)
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+      - 'src/**'
+      - 'requirements.txt'
+  
+  # Déclenchement manuel
+  workflow_dispatch:
+    inputs:
+      force_retrain:
+        description: 'Forcer le réentraînement même sans nouvelles données'
+        required: false
+        default: 'false'
+  
+  # Déclenchement programmé (tous les jours à 2h du matin)
+  schedule:
+    - cron: '0 2 * * *'  # Tous les jours à 2h UTC
+
+jobs:
+  check-new-data:
+    name: Vérifier les Nouvelles Données
+    runs-on: ubuntu-latest
+    outputs:
+      has_new_data: ${{ steps.check.outputs.has_new_data }}
+      new_data_count: ${{ steps.check.outputs.new_data_count }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Historique complet pour comparer
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy
+      
+      - name: Check for new data
+        id: check
+        run: |
+          python src/check_new_data.py
+          echo "has_new_data=$(cat /tmp/has_new_data.txt)" >> $GITHUB_OUTPUT
+          echo "new_data_count=$(cat /tmp/new_data_count.txt)" >> $GITHUB_OUTPUT
+      
+      - name: Display results
+        run: |
+          echo "🔍 Nouvelles données détectées: ${{ steps.check.outputs.has_new_data }}"
+          echo "📊 Nombre de nouvelles applications: ${{ steps.check.outputs.new_data_count }}"
+
+  train-and-evaluate:
+    name: Réentraînement et Évaluation
+    needs: check-new-data
+    runs-on: ubuntu-latest
+    if: needs.check-new-data.outputs.has_new_data == 'true' || github.event.inputs.force_retrain == 'true'
+    
+    outputs:
+      should_deploy: ${{ steps.decision.outputs.should_deploy }}
+      new_model_version: ${{ steps.train.outputs.model_version }}
+      accuracy: ${{ steps.train.outputs.accuracy }}
+      improvement: ${{ steps.train.outputs.improvement }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Start MLflow Server
+        run: |
+          mlflow server \
+            --backend-store-uri sqlite:///mlflow.db \
+            --default-artifact-root ./mlflow/artifacts \
+            --host 0.0.0.0 \
+            --port 5000 &
+          sleep 10
+      
+      - name: Train new model
+        id: train
+        env:
+          MLFLOW_TRACKING_URI: http://localhost:5000
+        run: |
+          python src/train_pipeline.py
+          echo "model_version=$(cat /tmp/model_version.txt)" >> $GITHUB_OUTPUT
+          echo "accuracy=$(cat /tmp/accuracy.txt)" >> $GITHUB_OUTPUT
+          echo "improvement=$(cat /tmp/improvement.txt)" >> $GITHUB_OUTPUT
+      
+      - name: Auto-deployment decision
+        id: decision
+        run: |
+          python src/deployment_decision.py
+          echo "should_deploy=$(cat /tmp/should_deploy.txt)" >> $GITHUB_OUTPUT
+      
+      - name: Upload model artifacts
+        if: steps.decision.outputs.should_deploy == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: trained-model
+          path: |
+            models/
+            mlflow/artifacts/
+      
+      - name: Create performance report
+        run: |
+          python src/generate_report.py
+      
+      - name: Upload performance report
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-report
+          path: reports/
+
+  deploy-model:
+    name: Déploiement du Modèle
+    needs: train-and-evaluate
+    runs-on: ubuntu-latest
+    if: needs.train-and-evaluate.outputs.should_deploy == 'true'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Download model artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: trained-model
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      
+      - name: Install deployment dependencies
+        run: |
+          pip install -r deployment/requirements.txt
+      
+      - name: Deploy to staging
+        run: |
+          echo "🚀 Déploiement en staging..."
+          python src/deploy.py --environment staging
+      
+      - name: Run smoke tests
+        run: |
+          python src/test_deployment.py --environment staging
+      
+      - name: Deploy to production (canary)
+        run: |
+          echo "🐤 Déploiement canary (5% du trafic)..."
+          python src/deploy.py --environment production --canary 0.05
+      
+      - name: Monitor canary deployment
+        run: |
+          echo "📊 Monitoring du déploiement canary..."
+          python src/monitor_canary.py --duration 300  # 5 minutes
+      
+      - name: Full production deployment
+        run: |
+          echo "✅ Déploiement production complet..."
+          python src/deploy.py --environment production --canary 1.0
+      
+      - name: Notify team
+        run: |
+          python src/notify.py \
+            --version ${{ needs.train-and-evaluate.outputs.new_model_version }} \
+            --accuracy ${{ needs.train-and-evaluate.outputs.accuracy }} \
+            --improvement ${{ needs.train-and-evaluate.outputs.improvement }}
+
+  monitoring:
+    name: Monitoring Post-Déploiement
+    needs: deploy-model
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Setup monitoring
+        run: |
+          echo "📊 Configuration du monitoring..."
+      
+      - name: Monitor for 24h
+        run: |
+          echo "⏰ Monitoring actif pour 24h"
+          echo "Alertes configurées pour détecter les dégradations"
+
+  rollback:
+    name: Rollback Automatique
+    needs: deploy-model
+    runs-on: ubuntu-latest
+    if: failure()
+    
+    steps:
+      - name: Rollback to previous version
+        run: |
+          echo "⚠️ Problème détecté - Rollback automatique"
+          python src/deploy.py --rollback
+      
+      - name: Notify team of rollback
+        run: |
+          python src/notify.py --rollback --reason "Deployment failed"

@@ -1,0 +1,30 @@
+{
+  "model_type": "RandomForestClassifier",
+  "library": "scikit-learn",
+  "optimization_method": "GridSearchCV",
+  "cv_folds": 5,
+  "n_combinations_tested": 216,
+  "training_time_seconds": 245.87757992744446,
+  "best_params": {
+    "max_depth": 10,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2,
+    "min_samples_split": 10,
+    "n_estimators": 200
+  },
+  "test_metrics": {
+    "accuracy": 0.9176663031624863,
+    "precision": 0.8624113475177305,
+    "recall": 0.918429003021148,
+    "f1_score": 0.8895391367959035,
+    "roc_auc": 0.9708015837827247
+  },
+  "dataset_info": {
+    "train_size": 7332,
+    "test_size": 1834,
+    "n_features": 7,
+    "n_classes": 2,
+    "success_rate_train": 36.09,
+    "success_rate_test": 36.1
+  }
+}
