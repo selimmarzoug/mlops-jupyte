@@ -365,3 +365,4 @@ Ce projet démontre une maîtrise complète du **workflow MLOps** avec MLflow:
 - ✅ **Documentation exhaustive**
 
 **Résultat**: Modèle Random Forest avec **97.08% ROC-AUC** prêt pour la production! 🎉
+# Test MLflow tracking
