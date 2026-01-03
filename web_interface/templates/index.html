@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLOps - Ajouter des Applications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e9ecef;
+            margin-bottom: 30px;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            background: #f8f9fa;
+            border: none;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        
+        .tab:hover {
+            background: #e9ecef;
+        }
+        
+        .tab.active {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .required {
+            color: red;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+        
+        .file-upload {
+            border: 3px dashed #e9ecef;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: #667eea;
+            background: #f8f9fa;
+        }
+        
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .col {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 MLOps Pipeline</h1>
+            <p>Ajouter des Nouvelles Applications</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">{{ stats.total_apps }}</div>
+                <div class="stat-label">Applications</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">{{ stats.total_categories }}</div>
+                <div class="stat-label">Catégories</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="trigger-status">✓</div>
+                <div class="stat-label">Pipeline Actif</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('manual')">Ajout Manuel</button>
+                <button class="tab" onclick="switchTab('bulk')">Upload CSV</button>
+            </div>
+            
+            <div id="alert" class="alert"></div>
+            
+            <!-- Onglet Ajout Manuel -->
+            <div id="manual-tab" class="tab-content active">
+                <form id="addAppForm">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Nom de l'App <span class="required">*</span></label>
+                                <input type="text" name="app_name" required placeholder="Ex: WhatsApp">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Catégorie <span class="required">*</span></label>
+                                <select name="category" required>
+                                    <option value="">Choisir...</option>
+                                    <option value="COMMUNICATION">Communication</option>
+                                    <option value="SOCIAL">Social</option>
+                                    <option value="GAME">Jeux</option>
+                                    <option value="PRODUCTIVITY">Productivité</option>
+                                    <option value="ENTERTAINMENT">Divertissement</option>
+                                    <option value="EDUCATION">Éducation</option>
+                                    <option value="BUSINESS">Business</option>
+                                    <option value="TOOLS">Outils</option>
+                                    <option value="LIFESTYLE">Style de vie</option>
+                                    <option value="FINANCE">Finance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Note (0-5)</label>
+                                <input type="number" name="rating" step="0.1" min="0" max="5" value="4.0">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Nombre d'Avis</label>
+                                <input type="number" name="reviews" min="0" value="1000">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Taille</label>
+                                <input type="text" name="size" placeholder="Ex: 25M" value="10M">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Installations</label>
+                                <input type="text" name="installs" placeholder="Ex: 10,000+" value="10,000+">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select name="type">
+                                    <option value="Free">Gratuit</option>
+                                    <option value="Paid">Payant</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Prix</label>
+                                <input type="text" name="price" placeholder="Ex: $0.99" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Classification</label>
+                                <select name="content_rating">
+                                    <option value="Everyone">Tout public</option>
+                                    <option value="Teen">Adolescents</option>
+                                    <option value="Mature 17+">Adultes 17+</option>
+                                    <option value="Everyone 10+">Tout public 10+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Genre</label>
+                                <input type="text" name="genres" placeholder="Ex: Communication" value="Productivity">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Version Actuelle</label>
+                                <input type="text" name="current_ver" placeholder="Ex: 2.5.1" value="1.0">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Version Android</label>
+                                <input type="text" name="android_ver" placeholder="Ex: 5.0 and up" value="4.0 and up">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">✨ Ajouter l'Application</button>
+                </form>
+            </div>
+            
+            <!-- Onglet Upload CSV -->
+            <div id="bulk-tab" class="tab-content">
+                <form id="bulkUploadForm">
+                    <div class="file-upload" onclick="document.getElementById('csvFile').click()">
+                        <h3>📁 Cliquez pour sélectionner un fichier CSV</h3>
+                        <p style="color: #6c757d; margin-top: 10px;">
+                            Format: App, Category, Rating, Reviews, Size, Installs, Type, Price...
+                        </p>
+                        <input type="file" id="csvFile" name="file" accept=".csv">
+                        <p id="fileName" style="margin-top: 15px; font-weight: bold;"></p>
+                    </div>
+                    <button type="submit" class="btn" style="margin-top: 20px;">📤 Upload et Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchTab(tab) {
+            // Désactiver tous les tabs
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            
+            // Activer le tab sélectionné
+            if (tab === 'manual') {
+                document.querySelector('.tab:nth-child(1)').classList.add('active');
+                document.getElementById('manual-tab').classList.add('active');
+            } else {
+                document.querySelector('.tab:nth-child(2)').classList.add('active');
+                document.getElementById('bulk-tab').classList.add('active');
+            }
+        }
+        
+        function showAlert(message, type) {
+            const alert = document.getElementById('alert');
+            alert.textContent = message;
+            alert.className = `alert alert-${type}`;
+            alert.style.display = 'block';
+            
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Formulaire ajout manuel
+        document.getElementById('addAppForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            
+            try {
+                const response = await fetch('/add_app', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    e.target.reset();
+                    // Mettre à jour le compteur
+                    document.querySelector('.stat-number').textContent = data.total_apps;
+                } else {
+                    showAlert(data.message, 'error');
+                }
+            } catch (error) {
+                showAlert('Erreur: ' + error.message, 'error');
+            }
+        });
+        
+        // Formulaire upload CSV
+        document.getElementById('csvFile').addEventListener('change', (e) => {
+            const fileName = e.target.files[0]?.name;
+            document.getElementById('fileName').textContent = fileName ? `Fichier: ${fileName}` : '';
+        });
+        
+        document.getElementById('bulkUploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            const fileInput = document.getElementById('csvFile');
+            
+            if (!fileInput.files[0]) {
+                showAlert('Veuillez sélectionner un fichier', 'error');
+                return;
+            }
+            
+            formData.append('file', fileInput.files[0]);
+            
+            try {
+                const response = await fetch('/bulk_upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    fileInput.value = '';
+                    document.getElementById('fileName').textContent = '';
+                    document.querySelector('.stat-number').textContent = data.total_apps;
+                } else {
+                    showAlert(data.message, 'error');
+                }
+            } catch (error) {
+                showAlert('Erreur: ' + error.message, 'error');
+            }
+        });
+    </script>
+</body>
+</html>
