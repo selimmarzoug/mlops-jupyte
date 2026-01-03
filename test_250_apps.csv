@@ -1,0 +1,251 @@
+App,Category,Rating,Reviews,Size,Installs,Type,Price,Content Rating,Genres,Last Updated,Current Ver,Android Ver
+Test Application 10001,TRAVEL_AND_LOCAL,4.0,80383,11M,"50,000+",Paid,0,Everyone 10+,EVENTS,March-20-2025,5.1.5,5.0 and up
+Test Application 10002,PHOTOGRAPHY,3.7,42080,86M,"50,000+",Free,0,Mature 17+,FOOD_AND_DRINK,January-2-2025,5.0.5,5.0 and up
+Test Application 10003,HOUSE_AND_HOME,4.2,90016,50M,"1,000,000+",Paid,0,Adults only 18+,HEALTH_AND_FITNESS,March-1-2025,2.3.4,4.4 and up
+Test Application 10004,NEWS_AND_MAGAZINES,4.8,91635,87M,"100,000+",Free,0,Teen,SHOPPING,January-19-2025,5.1.7,5.0 and up
+Test Application 10005,TRAVEL_AND_LOCAL,4.6,77662,51M,"100,000+",Paid,0,Teen,MEDICAL,March-7-2025,3.8.9,4.1 and up
+Test Application 10006,EDUCATION,3.6,28949,13M,"1,000,000+",Paid,$11.99,Everyone,ART_AND_DESIGN,May-13-2025,3.8.8,6.0 and up
+Test Application 10007,BOOKS_AND_REFERENCE,4.3,47847,90M,"50,000+",Paid,0,Adults only 18+,TRAVEL_AND_LOCAL,January-7-2025,3.1.8,6.0 and up
+Test Application 10008,PRODUCTIVITY,4.8,4102,20M,"10,000+",Paid,0,Everyone 10+,WEATHER,January-14-2025,5.2.6,4.4 and up
+Test Application 10009,HOUSE_AND_HOME,3.8,90915,73M,"500,000+",Free,0,Everyone 10+,HOUSE_AND_HOME,March-14-2025,5.5.7,4.1 and up
+Test Application 10010,DATING,4.0,96683,44M,"5,000+",Paid,$7.99,Everyone,PRODUCTIVITY,January-5-2025,5.5.7,5.0 and up
+Test Application 10011,AUTO_AND_VEHICLES,3.8,49649,38M,"1,000+",Free,0,Everyone,BEAUTY,January-19-2025,2.7.9,6.0 and up
+Test Application 10012,BOOKS_AND_REFERENCE,3.6,80981,45M,"1,000+",Paid,0,Everyone 10+,AUTO_AND_VEHICLES,March-22-2025,2.1.3,8.0 and up
+Test Application 10013,PRODUCTIVITY,3.6,41327,89M,"500,000+",Free,0,Everyone 10+,EDUCATION,February-17-2025,1.2.2,4.4 and up
+Test Application 10014,TRAVEL_AND_LOCAL,4.9,60170,40M,500+,Free,0,Everyone,LIBRARIES_AND_DEMO,February-21-2025,1.9.6,5.0 and up
+Test Application 10015,ART_AND_DESIGN,3.8,47247,41M,"1,000,000+",Paid,0,Teen,BOOKS_AND_REFERENCE,April-2-2025,3.2.2,6.0 and up
+Test Application 10016,EDUCATION,3.9,72047,100M,100+,Paid,0,Everyone,ART_AND_DESIGN,May-10-2025,2.2.8,4.4 and up
+Test Application 10017,FAMILY,4.5,85578,69M,500+,Paid,0,Mature 17+,TRAVEL_AND_LOCAL,March-20-2025,3.0.0,4.4 and up
+Test Application 10018,TRAVEL_AND_LOCAL,4.0,10402,82M,100+,Paid,0,Adults only 18+,BUSINESS,May-24-2025,1.1.1,7.0 and up
+Test Application 10019,AUTO_AND_VEHICLES,4.6,52907,79M,100+,Free,0,Everyone 10+,FINANCE,April-21-2025,2.7.7,6.0 and up
+Test Application 10020,PRODUCTIVITY,3.6,57579,32M,"100,000+",Free,0,Adults only 18+,LIBRARIES_AND_DEMO,April-4-2025,2.6.3,6.0 and up
+Test Application 10021,VIDEO_PLAYERS,4.7,33587,72M,"5,000,000+",Free,0,Everyone,SOCIAL,March-7-2025,1.3.2,6.0 and up
+Test Application 10022,COMMUNICATION,4.2,39183,41M,"1,000+",Paid,0,Everyone,BEAUTY,March-25-2025,3.8.4,6.0 and up
+Test Application 10023,FAMILY,3.8,93029,58M,"10,000,000+",Free,0,Everyone 10+,ENTERTAINMENT,May-8-2025,3.2.2,7.0 and up
+Test Application 10024,PERSONALIZATION,3.6,78196,11M,500+,Paid,0,Teen,LIFESTYLE,February-20-2025,1.4.7,4.1 and up
+Test Application 10025,COMICS,3.5,96694,53M,"5,000+",Free,0,Everyone,ENTERTAINMENT,April-16-2025,3.3.2,6.0 and up
+Test Application 10026,PRODUCTIVITY,3.9,42516,49M,"10,000+",Free,$6.99,Everyone,FAMILY,May-1-2025,3.0.1,7.0 and up
+Test Application 10027,HEALTH_AND_FITNESS,4.6,55855,42M,100+,Free,0,Adults only 18+,SPORTS,February-19-2025,3.0.4,4.4 and up
+Test Application 10028,ART_AND_DESIGN,3.6,41754,96M,"100,000+",Paid,$12.99,Teen,EDUCATION,May-26-2025,5.5.1,8.0 and up
+Test Application 10029,FINANCE,4.0,70779,81M,"1,000,000+",Paid,0,Everyone 10+,ENTERTAINMENT,February-17-2025,1.1.7,5.0 and up
+Test Application 10030,SOCIAL,3.9,88169,13M,"100,000+",Paid,0,Everyone,VIDEO_PLAYERS,May-18-2025,2.4.8,6.0 and up
+Test Application 10031,SPORTS,4.8,87926,48M,"1,000+",Free,0,Everyone,BEAUTY,March-22-2025,5.0.7,7.0 and up
+Test Application 10032,HOUSE_AND_HOME,4.1,82328,57M,100+,Free,0,Teen,TOOLS,March-8-2025,1.1.5,4.1 and up
+Test Application 10033,PRODUCTIVITY,3.9,88962,98M,"10,000+",Paid,0,Adults only 18+,FOOD_AND_DRINK,May-7-2025,2.2.6,5.0 and up
+Test Application 10034,TOOLS,3.7,98768,59M,"10,000,000+",Free,0,Mature 17+,EDUCATION,March-8-2025,2.5.3,6.0 and up
+Test Application 10035,MAPS_AND_NAVIGATION,3.6,67261,8M,"10,000,000+",Free,0,Mature 17+,SHOPPING,February-11-2025,5.5.9,4.4 and up
+Test Application 10036,EDUCATION,4.0,81799,38M,500+,Free,0,Everyone,PRODUCTIVITY,February-7-2025,2.7.3,7.0 and up
+Test Application 10037,EDUCATION,3.8,8283,60M,"10,000+",Paid,0,Everyone 10+,WEATHER,April-15-2025,2.3.9,7.0 and up
+Test Application 10038,PERSONALIZATION,4.1,72963,76M,"1,000+",Paid,0,Everyone,SPORTS,April-4-2025,4.2.3,8.0 and up
+Test Application 10039,BOOKS_AND_REFERENCE,4.0,24756,63M,500+,Free,0,Teen,TRAVEL_AND_LOCAL,January-8-2025,5.5.5,8.0 and up
+Test Application 10040,ART_AND_DESIGN,4.7,21715,39M,"100,000+",Free,0,Everyone 10+,SHOPPING,May-20-2025,5.8.6,6.0 and up
+Test Application 10041,AUTO_AND_VEHICLES,4.4,25460,93M,"10,000+",Paid,0,Everyone,SOCIAL,February-3-2025,4.4.4,5.0 and up
+Test Application 10042,SHOPPING,4.8,42188,82M,"10,000+",Paid,0,Everyone,AUTO_AND_VEHICLES,April-26-2025,5.7.1,4.1 and up
+Test Application 10043,EVENTS,4.4,74169,71M,"50,000+",Paid,0,Teen,FINANCE,January-8-2025,5.3.7,6.0 and up
+Test Application 10044,MEDICAL,4.5,62499,48M,"100,000+",Paid,0,Mature 17+,VIDEO_PLAYERS,February-20-2025,2.3.0,4.4 and up
+Test Application 10045,SPORTS,4.0,19742,89M,"10,000+",Free,0,Everyone 10+,VIDEO_PLAYERS,February-4-2025,1.8.6,4.1 and up
+Test Application 10046,SPORTS,4.7,64655,20M,"10,000+",Paid,0,Everyone,VIDEO_PLAYERS,April-2-2025,4.3.2,5.0 and up
+Test Application 10047,TRAVEL_AND_LOCAL,3.6,6273,43M,"500,000+",Paid,0,Everyone,HEALTH_AND_FITNESS,January-7-2025,4.1.2,6.0 and up
+Test Application 10048,VIDEO_PLAYERS,4.3,29314,23M,"10,000+",Paid,$11.99,Mature 17+,COMICS,April-14-2025,4.6.3,8.0 and up
+Test Application 10049,HEALTH_AND_FITNESS,4.0,61467,43M,500+,Paid,0,Adults only 18+,SHOPPING,March-20-2025,5.4.2,7.0 and up
+Test Application 10050,SOCIAL,3.6,4343,39M,"50,000+",Paid,0,Adults only 18+,LIBRARIES_AND_DEMO,February-1-2025,4.0.3,8.0 and up
+Test Application 10051,SPORTS,4.8,50416,100M,"1,000,000+",Paid,0,Everyone,PHOTOGRAPHY,January-17-2025,2.3.4,6.0 and up
+Test Application 10052,FOOD_AND_DRINK,4.2,80124,45M,500+,Free,0,Mature 17+,PARENTING,March-3-2025,5.4.6,4.4 and up
+Test Application 10053,FAMILY,4.9,69256,31M,"5,000,000+",Paid,0,Everyone 10+,ENTERTAINMENT,January-15-2025,4.1.3,4.1 and up
+Test Application 10054,COMMUNICATION,4.9,18738,78M,"5,000+",Paid,0,Everyone 10+,BEAUTY,April-16-2025,1.5.8,8.0 and up
+Test Application 10055,DATING,3.9,90014,24M,"50,000+",Paid,0,Mature 17+,FAMILY,April-19-2025,2.8.8,4.4 and up
+Test Application 10056,FAMILY,4.1,19306,89M,"100,000+",Paid,0,Everyone 10+,HOUSE_AND_HOME,April-24-2025,1.5.8,4.4 and up
+Test Application 10057,LIFESTYLE,3.5,24248,47M,"5,000+",Paid,0,Everyone 10+,LIBRARIES_AND_DEMO,May-1-2025,1.0.0,5.0 and up
+Test Application 10058,HOUSE_AND_HOME,3.5,97320,72M,500+,Paid,0,Everyone 10+,NEWS_AND_MAGAZINES,April-10-2025,2.5.2,8.0 and up
+Test Application 10059,BOOKS_AND_REFERENCE,4.0,15145,88M,100+,Paid,0,Teen,EDUCATION,March-25-2025,4.2.8,4.4 and up
+Test Application 10060,LIFESTYLE,4.2,4539,65M,"10,000+",Paid,$5.99,Everyone,COMMUNICATION,May-4-2025,2.2.7,5.0 and up
+Test Application 10061,VIDEO_PLAYERS,4.7,75298,14M,500+,Paid,0,Teen,MEDICAL,January-5-2025,5.7.1,6.0 and up
+Test Application 10062,MEDICAL,4.0,14502,47M,"1,000,000+",Paid,0,Everyone 10+,FAMILY,March-25-2025,3.4.2,8.0 and up
+Test Application 10063,EDUCATION,4.5,42563,6M,"10,000+",Paid,0,Mature 17+,MAPS_AND_NAVIGATION,April-12-2025,5.2.5,4.1 and up
+Test Application 10064,TOOLS,4.4,44422,28M,"10,000+",Free,0,Adults only 18+,FINANCE,March-6-2025,4.2.1,4.1 and up
+Test Application 10065,EDUCATION,4.1,78651,28M,"10,000+",Free,0,Mature 17+,GAME,April-16-2025,2.2.6,6.0 and up
+Test Application 10066,PERSONALIZATION,3.9,12970,30M,500+,Free,0,Mature 17+,AUTO_AND_VEHICLES,January-5-2025,2.4.3,4.1 and up
+Test Application 10067,COMICS,4.7,30664,84M,"500,000+",Paid,0,Everyone,EVENTS,April-13-2025,2.4.9,5.0 and up
+Test Application 10068,NEWS_AND_MAGAZINES,4.9,57105,41M,500+,Free,0,Everyone,COMMUNICATION,January-2-2025,4.1.1,5.0 and up
+Test Application 10069,TRAVEL_AND_LOCAL,4.0,93331,30M,"1,000,000+",Paid,0,Everyone 10+,VIDEO_PLAYERS,April-5-2025,3.7.6,8.0 and up
+Test Application 10070,SPORTS,3.9,2380,13M,"5,000+",Paid,0,Teen,EVENTS,March-21-2025,3.2.7,7.0 and up
+Test Application 10071,PRODUCTIVITY,4.1,56568,99M,"50,000+",Paid,0,Teen,FAMILY,April-19-2025,5.2.8,6.0 and up
+Test Application 10072,TRAVEL_AND_LOCAL,3.7,80280,87M,100+,Free,0,Everyone 10+,LIFESTYLE,May-3-2025,5.2.3,8.0 and up
+Test Application 10073,AUTO_AND_VEHICLES,4.5,99469,13M,"50,000+",Paid,0,Mature 17+,BEAUTY,May-3-2025,1.3.2,7.0 and up
+Test Application 10074,FAMILY,4.2,33544,6M,"10,000+",Free,0,Adults only 18+,BUSINESS,April-24-2025,2.3.7,7.0 and up
+Test Application 10075,LIFESTYLE,4.2,72114,48M,"1,000+",Paid,0,Teen,LIFESTYLE,April-21-2025,1.4.5,5.0 and up
+Test Application 10076,ENTERTAINMENT,4.8,77620,9M,"1,000,000+",Paid,0,Everyone,EVENTS,January-9-2025,2.3.1,6.0 and up
+Test Application 10077,PERSONALIZATION,4.0,72517,42M,"500,000+",Paid,0,Adults only 18+,BUSINESS,April-23-2025,4.3.1,8.0 and up
+Test Application 10078,FINANCE,4.8,55450,30M,"100,000+",Free,0,Mature 17+,VIDEO_PLAYERS,January-24-2025,3.6.2,4.4 and up
+Test Application 10079,SPORTS,4.1,34722,98M,100+,Free,0,Adults only 18+,TOOLS,April-5-2025,3.1.8,7.0 and up
+Test Application 10080,SOCIAL,3.8,95815,93M,"5,000,000+",Paid,$13.99,Teen,COMMUNICATION,February-14-2025,3.2.9,7.0 and up
+Test Application 10081,BOOKS_AND_REFERENCE,4.7,2693,67M,"1,000,000+",Paid,0,Everyone,TRAVEL_AND_LOCAL,March-1-2025,3.6.9,6.0 and up
+Test Application 10082,SHOPPING,4.2,73500,29M,"1,000+",Free,0,Teen,EDUCATION,January-12-2025,4.1.2,5.0 and up
+Test Application 10083,TRAVEL_AND_LOCAL,4.7,57261,45M,"1,000,000+",Paid,0,Everyone 10+,BUSINESS,February-1-2025,4.0.5,8.0 and up
+Test Application 10084,LIBRARIES_AND_DEMO,4.3,91515,21M,100+,Free,0,Mature 17+,FAMILY,February-9-2025,1.0.6,7.0 and up
+Test Application 10085,EVENTS,3.7,12016,91M,"10,000+",Free,0,Teen,NEWS_AND_MAGAZINES,January-26-2025,4.4.2,4.1 and up
+Test Application 10086,HOUSE_AND_HOME,3.9,72773,81M,"100,000+",Paid,0,Adults only 18+,PARENTING,May-11-2025,4.8.1,7.0 and up
+Test Application 10087,EVENTS,4.9,87176,78M,"10,000+",Free,0,Everyone,VIDEO_PLAYERS,May-1-2025,2.0.9,4.4 and up
+Test Application 10088,VIDEO_PLAYERS,4.9,53039,48M,"10,000,000+",Paid,0,Adults only 18+,LIFESTYLE,February-19-2025,2.3.3,6.0 and up
+Test Application 10089,LIFESTYLE,4.0,57430,65M,"10,000+",Free,0,Everyone 10+,DATING,March-1-2025,3.8.0,4.4 and up
+Test Application 10090,ART_AND_DESIGN,4.2,86940,40M,"500,000+",Free,0,Mature 17+,LIFESTYLE,February-24-2025,4.5.7,7.0 and up
+Test Application 10091,GAME,4.5,90031,27M,"10,000+",Paid,$7.99,Adults only 18+,HOUSE_AND_HOME,May-28-2025,3.0.3,4.4 and up
+Test Application 10092,PARENTING,4.7,15512,79M,"100,000+",Paid,0,Teen,COMMUNICATION,March-4-2025,1.1.6,6.0 and up
+Test Application 10093,MAPS_AND_NAVIGATION,3.9,99264,85M,"1,000,000+",Free,$1.99,Everyone,FOOD_AND_DRINK,February-6-2025,3.7.7,4.1 and up
+Test Application 10094,WEATHER,3.7,85172,26M,"100,000+",Paid,0,Adults only 18+,HEALTH_AND_FITNESS,February-15-2025,5.3.8,7.0 and up
+Test Application 10095,COMMUNICATION,4.1,408,91M,100+,Paid,0,Everyone,DATING,January-22-2025,5.5.5,4.4 and up
+Test Application 10096,ART_AND_DESIGN,3.7,84085,42M,"500,000+",Free,0,Mature 17+,FINANCE,January-26-2025,3.6.2,6.0 and up
+Test Application 10097,DATING,4.6,62624,17M,"10,000+",Free,0,Everyone,HEALTH_AND_FITNESS,May-18-2025,1.4.6,5.0 and up
+Test Application 10098,PRODUCTIVITY,4.0,8887,24M,"500,000+",Paid,0,Everyone 10+,VIDEO_PLAYERS,January-3-2025,4.1.7,4.4 and up
+Test Application 10099,HOUSE_AND_HOME,4.1,5456,95M,"1,000,000+",Paid,$18.99,Adults only 18+,BUSINESS,April-12-2025,1.7.1,4.1 and up
+Test Application 10100,MEDICAL,3.8,1072,33M,"50,000+",Paid,0,Everyone 10+,WEATHER,January-27-2025,4.1.6,4.4 and up
+Test Application 10101,FAMILY,4.6,21009,43M,"5,000,000+",Paid,$10.99,Adults only 18+,EDUCATION,February-7-2025,4.1.6,5.0 and up
+Test Application 10102,FINANCE,3.6,42959,70M,"10,000+",Free,0,Teen,MAPS_AND_NAVIGATION,April-12-2025,5.0.6,4.4 and up
+Test Application 10103,ENTERTAINMENT,3.7,86569,14M,500+,Free,0,Everyone,FAMILY,February-5-2025,1.5.7,6.0 and up
+Test Application 10104,HEALTH_AND_FITNESS,4.2,51166,72M,"10,000,000+",Paid,0,Mature 17+,FAMILY,January-23-2025,5.6.8,6.0 and up
+Test Application 10105,EDUCATION,4.3,706,88M,500+,Paid,0,Everyone,BOOKS_AND_REFERENCE,May-27-2025,2.9.6,7.0 and up
+Test Application 10106,PRODUCTIVITY,3.7,50883,27M,"10,000,000+",Paid,0,Adults only 18+,MEDICAL,January-20-2025,4.7.5,4.4 and up
+Test Application 10107,PHOTOGRAPHY,4.7,25091,23M,"5,000,000+",Paid,$7.99,Everyone 10+,MAPS_AND_NAVIGATION,May-17-2025,2.5.9,5.0 and up
+Test Application 10108,COMMUNICATION,3.7,29456,77M,"500,000+",Free,0,Everyone,PRODUCTIVITY,March-15-2025,5.9.8,4.1 and up
+Test Application 10109,WEATHER,4.9,73781,97M,"50,000+",Paid,0,Everyone,SHOPPING,April-10-2025,3.7.8,4.1 and up
+Test Application 10110,HEALTH_AND_FITNESS,4.6,17675,69M,"1,000+",Free,$6.99,Everyone 10+,PERSONALIZATION,February-10-2025,1.8.6,5.0 and up
+Test Application 10111,PRODUCTIVITY,4.9,73610,24M,"100,000+",Paid,0,Everyone,VIDEO_PLAYERS,January-13-2025,2.8.7,4.1 and up
+Test Application 10112,HEALTH_AND_FITNESS,4.9,79861,81M,"10,000,000+",Free,0,Everyone 10+,TRAVEL_AND_LOCAL,April-23-2025,3.0.5,4.1 and up
+Test Application 10113,COMICS,4.9,27808,13M,"10,000+",Free,0,Everyone,AUTO_AND_VEHICLES,February-16-2025,1.8.2,6.0 and up
+Test Application 10114,BEAUTY,4.9,71698,62M,"500,000+",Free,0,Adults only 18+,HEALTH_AND_FITNESS,May-3-2025,1.1.9,7.0 and up
+Test Application 10115,ENTERTAINMENT,3.9,19807,67M,"10,000+",Free,0,Teen,EDUCATION,January-14-2025,4.0.5,8.0 and up
+Test Application 10116,LIFESTYLE,4.1,75955,86M,"5,000,000+",Paid,0,Everyone,ENTERTAINMENT,April-25-2025,3.3.8,7.0 and up
+Test Application 10117,HOUSE_AND_HOME,4.3,14649,28M,"1,000+",Free,0,Everyone 10+,BEAUTY,January-16-2025,3.1.6,8.0 and up
+Test Application 10118,NEWS_AND_MAGAZINES,4.3,39824,34M,"10,000,000+",Paid,0,Everyone 10+,LIFESTYLE,April-7-2025,5.7.2,7.0 and up
+Test Application 10119,ART_AND_DESIGN,4.9,17385,19M,"500,000+",Free,0,Everyone 10+,PERSONALIZATION,April-17-2025,2.0.8,8.0 and up
+Test Application 10120,PARENTING,4.9,96616,69M,"5,000+",Paid,0,Everyone,MEDICAL,February-2-2025,4.5.7,4.1 and up
+Test Application 10121,AUTO_AND_VEHICLES,4.2,81880,83M,"1,000+",Paid,0,Adults only 18+,PRODUCTIVITY,March-6-2025,5.0.1,6.0 and up
+Test Application 10122,VIDEO_PLAYERS,3.6,64309,86M,"1,000,000+",Free,0,Adults only 18+,COMICS,February-3-2025,2.1.2,8.0 and up
+Test Application 10123,AUTO_AND_VEHICLES,4.8,75914,99M,"500,000+",Free,0,Everyone,TOOLS,April-19-2025,5.4.6,7.0 and up
+Test Application 10124,NEWS_AND_MAGAZINES,4.7,26162,57M,"50,000+",Free,0,Mature 17+,DATING,January-9-2025,5.5.2,4.1 and up
+Test Application 10125,HEALTH_AND_FITNESS,3.9,33713,60M,"100,000+",Free,$9.99,Adults only 18+,BUSINESS,April-9-2025,3.5.0,6.0 and up
+Test Application 10126,FAMILY,4.6,43514,100M,"5,000+",Free,$18.99,Teen,PHOTOGRAPHY,February-3-2025,1.1.2,6.0 and up
+Test Application 10127,DATING,4.2,74437,98M,"1,000+",Paid,0,Everyone 10+,ENTERTAINMENT,May-17-2025,2.1.8,4.4 and up
+Test Application 10128,FINANCE,4.7,14939,15M,"100,000+",Paid,0,Teen,AUTO_AND_VEHICLES,January-14-2025,3.8.7,6.0 and up
+Test Application 10129,GAME,3.6,49632,57M,"500,000+",Paid,0,Everyone,SOCIAL,April-17-2025,2.4.4,8.0 and up
+Test Application 10130,ART_AND_DESIGN,4.6,19949,54M,"500,000+",Paid,0,Everyone 10+,DATING,April-21-2025,1.7.6,4.1 and up
+Test Application 10131,PERSONALIZATION,4.6,22960,94M,"1,000+",Paid,$13.99,Teen,DATING,February-7-2025,5.2.5,7.0 and up
+Test Application 10132,EVENTS,4.0,73763,72M,"50,000+",Paid,0,Adults only 18+,NEWS_AND_MAGAZINES,January-26-2025,3.2.9,4.1 and up
+Test Application 10133,BEAUTY,5.0,91588,89M,"500,000+",Free,0,Everyone,TRAVEL_AND_LOCAL,January-23-2025,4.7.3,4.4 and up
+Test Application 10134,MAPS_AND_NAVIGATION,4.3,46600,87M,"100,000+",Paid,0,Adults only 18+,FINANCE,February-2-2025,3.5.4,4.4 and up
+Test Application 10135,ENTERTAINMENT,4.9,25176,38M,"1,000,000+",Free,0,Mature 17+,ENTERTAINMENT,March-27-2025,2.0.0,5.0 and up
+Test Application 10136,SPORTS,3.7,97530,46M,"1,000,000+",Free,0,Mature 17+,AUTO_AND_VEHICLES,April-10-2025,4.0.8,8.0 and up
+Test Application 10137,PERSONALIZATION,3.9,94324,22M,"5,000+",Free,0,Adults only 18+,HEALTH_AND_FITNESS,April-17-2025,2.7.9,8.0 and up
+Test Application 10138,PARENTING,3.8,947,31M,"1,000+",Paid,0,Mature 17+,LIFESTYLE,January-2-2025,5.6.3,4.1 and up
+Test Application 10139,PARENTING,4.8,38736,13M,"10,000,000+",Paid,0,Adults only 18+,MEDICAL,February-18-2025,1.2.1,6.0 and up
+Test Application 10140,VIDEO_PLAYERS,4.3,59472,97M,"5,000,000+",Paid,$20.99,Mature 17+,FOOD_AND_DRINK,March-28-2025,4.2.5,7.0 and up
+Test Application 10141,FOOD_AND_DRINK,4.6,14728,56M,500+,Paid,0,Adults only 18+,SHOPPING,February-22-2025,1.0.5,8.0 and up
+Test Application 10142,BUSINESS,3.5,4694,5M,"5,000,000+",Paid,$17.99,Adults only 18+,PARENTING,January-1-2025,2.5.4,5.0 and up
+Test Application 10143,DATING,4.8,8211,5M,"100,000+",Free,0,Mature 17+,MEDICAL,February-17-2025,1.3.6,4.1 and up
+Test Application 10144,DATING,4.0,5679,90M,"10,000,000+",Paid,0,Adults only 18+,BEAUTY,January-4-2025,2.2.7,4.1 and up
+Test Application 10145,COMICS,4.1,12415,100M,"100,000+",Free,0,Mature 17+,COMMUNICATION,April-27-2025,5.0.3,7.0 and up
+Test Application 10146,TRAVEL_AND_LOCAL,4.6,2325,88M,"10,000,000+",Paid,0,Everyone 10+,EVENTS,May-18-2025,5.8.2,7.0 and up
+Test Application 10147,COMMUNICATION,4.6,4925,77M,"1,000,000+",Paid,0,Everyone,PERSONALIZATION,May-10-2025,4.5.4,7.0 and up
+Test Application 10148,PHOTOGRAPHY,4.1,64736,98M,"5,000+",Free,0,Adults only 18+,TOOLS,January-24-2025,1.2.2,7.0 and up
+Test Application 10149,BOOKS_AND_REFERENCE,4.2,99034,98M,"10,000+",Free,0,Everyone,MAPS_AND_NAVIGATION,March-2-2025,5.5.1,8.0 and up
+Test Application 10150,WEATHER,3.6,31794,78M,"10,000,000+",Free,0,Everyone,FOOD_AND_DRINK,February-10-2025,2.0.1,6.0 and up
+Test Application 10151,HOUSE_AND_HOME,4.8,3341,84M,"500,000+",Free,0,Everyone,SOCIAL,March-1-2025,5.3.4,4.4 and up
+Test Application 10152,ENTERTAINMENT,4.4,11442,60M,"5,000,000+",Free,0,Adults only 18+,PHOTOGRAPHY,March-23-2025,5.5.0,8.0 and up
+Test Application 10153,PHOTOGRAPHY,3.6,83058,42M,"5,000,000+",Free,0,Everyone 10+,NEWS_AND_MAGAZINES,April-14-2025,1.9.9,4.4 and up
+Test Application 10154,TRAVEL_AND_LOCAL,4.0,96710,31M,"10,000,000+",Paid,0,Everyone 10+,TRAVEL_AND_LOCAL,April-4-2025,3.5.4,4.1 and up
+Test Application 10155,PHOTOGRAPHY,3.9,8246,8M,100+,Free,0,Teen,VIDEO_PLAYERS,February-28-2025,5.0.1,4.4 and up
+Test Application 10156,ENTERTAINMENT,3.8,3517,59M,100+,Free,$16.99,Everyone 10+,ART_AND_DESIGN,April-22-2025,3.9.0,4.4 and up
+Test Application 10157,NEWS_AND_MAGAZINES,4.1,22547,79M,"100,000+",Paid,0,Mature 17+,HEALTH_AND_FITNESS,May-14-2025,1.4.2,6.0 and up
+Test Application 10158,ENTERTAINMENT,4.7,82265,56M,"10,000+",Free,0,Everyone 10+,BOOKS_AND_REFERENCE,February-4-2025,4.4.8,4.1 and up
+Test Application 10159,LIFESTYLE,3.9,53031,23M,"5,000,000+",Free,0,Everyone 10+,SOCIAL,February-21-2025,2.8.9,4.4 and up
+Test Application 10160,PERSONALIZATION,4.3,93652,21M,500+,Free,0,Mature 17+,SHOPPING,February-14-2025,5.7.6,5.0 and up
+Test Application 10161,SPORTS,4.8,77040,61M,"5,000+",Paid,0,Mature 17+,DATING,May-6-2025,1.1.3,7.0 and up
+Test Application 10162,TRAVEL_AND_LOCAL,4.2,39948,45M,"50,000+",Free,0,Everyone 10+,MEDICAL,January-26-2025,3.9.9,4.1 and up
+Test Application 10163,TRAVEL_AND_LOCAL,3.8,90058,69M,"1,000+",Paid,0,Adults only 18+,DATING,May-13-2025,1.3.2,4.1 and up
+Test Application 10164,ENTERTAINMENT,3.9,73524,63M,"10,000,000+",Free,0,Mature 17+,PERSONALIZATION,April-1-2025,4.6.8,8.0 and up
+Test Application 10165,MAPS_AND_NAVIGATION,4.4,11496,65M,"5,000+",Paid,0,Everyone,SHOPPING,January-7-2025,1.3.5,8.0 and up
+Test Application 10166,FOOD_AND_DRINK,4.6,63535,64M,"5,000+",Paid,0,Mature 17+,SHOPPING,May-5-2025,2.6.8,7.0 and up
+Test Application 10167,FOOD_AND_DRINK,4.0,99799,58M,"100,000+",Free,0,Adults only 18+,LIBRARIES_AND_DEMO,January-22-2025,4.3.1,4.1 and up
+Test Application 10168,LIFESTYLE,3.8,82919,39M,"50,000+",Paid,0,Everyone,HEALTH_AND_FITNESS,March-13-2025,1.9.1,8.0 and up
+Test Application 10169,TRAVEL_AND_LOCAL,4.5,55930,95M,"500,000+",Free,0,Adults only 18+,MEDICAL,May-17-2025,4.0.2,4.4 and up
+Test Application 10170,EDUCATION,3.6,84086,94M,"5,000+",Paid,$8.99,Teen,MEDICAL,February-8-2025,1.2.5,5.0 and up
+Test Application 10171,EVENTS,4.5,38482,26M,100+,Free,0,Adults only 18+,MAPS_AND_NAVIGATION,May-13-2025,1.5.0,4.4 and up
+Test Application 10172,ART_AND_DESIGN,3.8,70145,80M,"10,000+",Paid,$12.99,Everyone 10+,FOOD_AND_DRINK,May-21-2025,1.6.2,4.4 and up
+Test Application 10173,COMICS,4.7,33318,47M,"1,000+",Free,0,Mature 17+,ENTERTAINMENT,March-3-2025,4.9.4,7.0 and up
+Test Application 10174,PARENTING,4.3,17981,73M,"5,000,000+",Free,0,Mature 17+,EDUCATION,January-2-2025,4.1.4,4.4 and up
+Test Application 10175,FINANCE,4.5,36860,19M,500+,Free,0,Adults only 18+,TOOLS,March-6-2025,4.6.5,5.0 and up
+Test Application 10176,WEATHER,4.8,91308,72M,"500,000+",Paid,0,Mature 17+,FINANCE,April-15-2025,3.8.1,7.0 and up
+Test Application 10177,HEALTH_AND_FITNESS,3.8,46135,66M,"500,000+",Free,$19.99,Everyone 10+,BUSINESS,March-15-2025,5.7.3,6.0 and up
+Test Application 10178,EVENTS,4.8,76981,20M,"1,000+",Free,0,Everyone 10+,FAMILY,May-20-2025,5.9.0,4.4 and up
+Test Application 10179,BOOKS_AND_REFERENCE,4.9,63927,98M,"1,000,000+",Paid,0,Everyone 10+,BEAUTY,January-22-2025,1.4.1,6.0 and up
+Test Application 10180,HEALTH_AND_FITNESS,3.6,39400,32M,"1,000+",Paid,0,Adults only 18+,COMMUNICATION,January-18-2025,5.9.3,7.0 and up
+Test Application 10181,HOUSE_AND_HOME,4.3,65955,21M,"10,000,000+",Paid,$14.99,Teen,LIBRARIES_AND_DEMO,March-19-2025,2.0.1,8.0 and up
+Test Application 10182,WEATHER,4.9,52958,85M,500+,Free,0,Everyone,EVENTS,May-24-2025,4.5.2,7.0 and up
+Test Application 10183,TRAVEL_AND_LOCAL,4.5,76122,93M,"5,000+",Free,0,Adults only 18+,PARENTING,February-14-2025,4.0.5,6.0 and up
+Test Application 10184,PERSONALIZATION,4.9,57321,52M,"10,000,000+",Free,0,Mature 17+,PHOTOGRAPHY,February-28-2025,1.2.6,7.0 and up
+Test Application 10185,BEAUTY,4.1,57763,15M,500+,Paid,0,Adults only 18+,ART_AND_DESIGN,February-13-2025,4.9.3,5.0 and up
+Test Application 10186,AUTO_AND_VEHICLES,3.8,47021,70M,"5,000+",Free,0,Mature 17+,ENTERTAINMENT,March-22-2025,1.6.3,4.1 and up
+Test Application 10187,PHOTOGRAPHY,4.0,88221,32M,"100,000+",Paid,0,Mature 17+,LIFESTYLE,April-8-2025,5.9.5,4.4 and up
+Test Application 10188,DATING,4.4,92063,72M,"5,000+",Paid,0,Adults only 18+,ENTERTAINMENT,February-18-2025,3.7.8,5.0 and up
+Test Application 10189,LIFESTYLE,3.8,6180,61M,"1,000,000+",Paid,0,Adults only 18+,PARENTING,March-13-2025,3.4.6,4.4 and up
+Test Application 10190,COMICS,4.5,21457,75M,100+,Paid,0,Everyone 10+,SOCIAL,May-10-2025,1.2.9,6.0 and up
+Test Application 10191,BEAUTY,4.9,32195,90M,"10,000,000+",Free,0,Mature 17+,SOCIAL,April-13-2025,5.7.0,5.0 and up
+Test Application 10192,ART_AND_DESIGN,4.8,48741,95M,"10,000+",Free,$18.99,Mature 17+,EVENTS,January-13-2025,5.2.9,6.0 and up
+Test Application 10193,SHOPPING,4.5,86694,19M,"500,000+",Free,0,Teen,PERSONALIZATION,February-6-2025,5.1.5,8.0 and up
+Test Application 10194,COMICS,4.1,96433,25M,"5,000,000+",Free,0,Everyone,PARENTING,February-14-2025,5.0.4,4.4 and up
+Test Application 10195,GAME,3.9,79270,43M,"10,000+",Paid,0,Adults only 18+,BUSINESS,March-16-2025,3.7.6,7.0 and up
+Test Application 10196,MAPS_AND_NAVIGATION,3.9,27855,94M,100+,Free,0,Mature 17+,HEALTH_AND_FITNESS,March-2-2025,4.7.3,5.0 and up
+Test Application 10197,FINANCE,4.1,25523,52M,"500,000+",Free,0,Everyone,FAMILY,January-19-2025,2.9.8,5.0 and up
+Test Application 10198,VIDEO_PLAYERS,4.2,71884,73M,100+,Paid,0,Teen,TOOLS,March-18-2025,2.3.4,5.0 and up
+Test Application 10199,DATING,4.7,80091,95M,"5,000,000+",Paid,0,Adults only 18+,LIBRARIES_AND_DEMO,February-1-2025,4.4.1,7.0 and up
+Test Application 10200,SOCIAL,3.8,33510,45M,"1,000+",Paid,$18.99,Everyone 10+,MEDICAL,April-25-2025,5.5.1,5.0 and up
+Test Application 10201,EDUCATION,4.9,15918,79M,"1,000+",Free,0,Everyone 10+,COMMUNICATION,May-19-2025,2.6.1,4.1 and up
+Test Application 10202,COMMUNICATION,4.4,66665,44M,"1,000+",Paid,0,Adults only 18+,MEDICAL,March-28-2025,3.8.4,7.0 and up
+Test Application 10203,TRAVEL_AND_LOCAL,5.0,37625,8M,100+,Free,0,Teen,PARENTING,February-2-2025,4.6.1,6.0 and up
+Test Application 10204,PRODUCTIVITY,4.3,28903,79M,"500,000+",Paid,$5.99,Everyone,WEATHER,February-9-2025,4.6.6,8.0 and up
+Test Application 10205,NEWS_AND_MAGAZINES,3.6,99246,12M,"5,000,000+",Paid,0,Teen,BUSINESS,February-27-2025,5.5.8,4.1 and up
+Test Application 10206,COMMUNICATION,3.8,20123,30M,"1,000,000+",Paid,$10.99,Mature 17+,DATING,February-14-2025,4.4.5,4.1 and up
+Test Application 10207,VIDEO_PLAYERS,4.9,18030,51M,"5,000+",Free,0,Adults only 18+,FOOD_AND_DRINK,May-14-2025,1.0.1,8.0 and up
+Test Application 10208,COMMUNICATION,5.0,32572,31M,"10,000+",Free,0,Everyone,NEWS_AND_MAGAZINES,February-28-2025,1.6.1,4.4 and up
+Test Application 10209,AUTO_AND_VEHICLES,3.8,82080,18M,"500,000+",Paid,$8.99,Everyone 10+,FINANCE,January-27-2025,1.2.7,5.0 and up
+Test Application 10210,PERSONALIZATION,4.6,81789,52M,"1,000+",Free,0,Everyone,VIDEO_PLAYERS,May-13-2025,2.0.6,6.0 and up
+Test Application 10211,ENTERTAINMENT,4.6,7728,87M,"1,000,000+",Paid,$20.99,Teen,ENTERTAINMENT,January-1-2025,4.8.3,4.4 and up
+Test Application 10212,PARENTING,4.6,39583,92M,"1,000,000+",Free,0,Everyone 10+,LIFESTYLE,March-9-2025,3.8.3,6.0 and up
+Test Application 10213,LIFESTYLE,4.3,54261,64M,500+,Free,0,Adults only 18+,EVENTS,February-25-2025,5.2.0,5.0 and up
+Test Application 10214,GAME,3.5,51558,81M,"10,000,000+",Free,0,Everyone,FOOD_AND_DRINK,April-21-2025,1.5.3,4.4 and up
+Test Application 10215,MEDICAL,4.8,71801,59M,"10,000+",Free,0,Teen,TOOLS,March-23-2025,5.1.5,4.1 and up
+Test Application 10216,NEWS_AND_MAGAZINES,4.2,39846,99M,"100,000+",Paid,$12.99,Mature 17+,PHOTOGRAPHY,February-18-2025,5.9.7,5.0 and up
+Test Application 10217,NEWS_AND_MAGAZINES,4.2,89715,24M,"50,000+",Free,0,Everyone,MEDICAL,March-6-2025,5.2.9,4.4 and up
+Test Application 10218,BOOKS_AND_REFERENCE,4.9,56268,21M,"100,000+",Free,0,Adults only 18+,LIBRARIES_AND_DEMO,March-11-2025,4.7.8,5.0 and up
+Test Application 10219,MAPS_AND_NAVIGATION,4.6,46431,37M,"1,000,000+",Paid,0,Everyone 10+,ART_AND_DESIGN,April-13-2025,1.0.4,4.1 and up
+Test Application 10220,FAMILY,4.9,39623,70M,"10,000,000+",Free,$7.99,Teen,AUTO_AND_VEHICLES,March-10-2025,4.3.7,7.0 and up
+Test Application 10221,FINANCE,4.1,64333,12M,"10,000,000+",Free,0,Everyone 10+,VIDEO_PLAYERS,February-10-2025,4.6.6,5.0 and up
+Test Application 10222,LIFESTYLE,4.2,84833,92M,"5,000,000+",Free,0,Adults only 18+,LIFESTYLE,January-20-2025,2.2.6,8.0 and up
+Test Application 10223,PARENTING,4.9,70893,62M,100+,Free,0,Adults only 18+,LIBRARIES_AND_DEMO,March-8-2025,3.0.0,6.0 and up
+Test Application 10224,PRODUCTIVITY,4.5,90655,6M,"1,000+",Paid,$17.99,Teen,FOOD_AND_DRINK,May-18-2025,1.5.3,4.4 and up
+Test Application 10225,VIDEO_PLAYERS,4.1,17413,86M,"500,000+",Free,0,Mature 17+,COMICS,April-23-2025,1.7.3,4.1 and up
+Test Application 10226,HEALTH_AND_FITNESS,4.9,70825,99M,"500,000+",Free,$2.99,Mature 17+,BOOKS_AND_REFERENCE,April-11-2025,5.4.7,8.0 and up
+Test Application 10227,BEAUTY,4.0,66926,17M,"1,000+",Paid,0,Everyone,PHOTOGRAPHY,April-26-2025,2.9.6,4.4 and up
+Test Application 10228,SOCIAL,4.9,45409,26M,100+,Free,0,Mature 17+,FAMILY,May-2-2025,5.6.9,8.0 and up
+Test Application 10229,TRAVEL_AND_LOCAL,3.6,26784,6M,"5,000+",Free,0,Adults only 18+,HOUSE_AND_HOME,January-8-2025,4.8.2,7.0 and up
+Test Application 10230,EVENTS,4.6,68377,63M,"100,000+",Free,0,Everyone,LIFESTYLE,April-20-2025,4.2.9,7.0 and up
+Test Application 10231,AUTO_AND_VEHICLES,4.4,90366,8M,"50,000+",Paid,0,Adults only 18+,TRAVEL_AND_LOCAL,January-9-2025,3.8.3,8.0 and up
+Test Application 10232,VIDEO_PLAYERS,3.7,20273,84M,"500,000+",Free,0,Adults only 18+,VIDEO_PLAYERS,March-5-2025,4.4.6,4.4 and up
+Test Application 10233,SHOPPING,4.8,5227,85M,"1,000+",Paid,0,Mature 17+,AUTO_AND_VEHICLES,March-2-2025,1.6.3,8.0 and up
+Test Application 10234,GAME,3.6,97196,81M,"1,000+",Free,0,Mature 17+,ENTERTAINMENT,April-17-2025,5.3.3,5.0 and up
+Test Application 10235,SHOPPING,4.8,92000,92M,"10,000,000+",Paid,0,Mature 17+,COMMUNICATION,February-20-2025,5.8.2,5.0 and up
+Test Application 10236,HOUSE_AND_HOME,4.0,84729,8M,"5,000+",Paid,0,Teen,PERSONALIZATION,February-28-2025,5.6.5,4.1 and up
+Test Application 10237,BUSINESS,4.5,91639,65M,"1,000,000+",Free,0,Everyone 10+,COMMUNICATION,January-15-2025,4.2.4,8.0 and up
+Test Application 10238,EVENTS,4.3,40494,99M,"1,000,000+",Paid,0,Everyone 10+,EVENTS,April-1-2025,2.5.8,6.0 and up
+Test Application 10239,LIFESTYLE,3.8,73123,11M,100+,Paid,0,Everyone,LIBRARIES_AND_DEMO,March-16-2025,3.3.3,7.0 and up
+Test Application 10240,BOOKS_AND_REFERENCE,5.0,66189,70M,"5,000,000+",Free,0,Everyone,SHOPPING,February-27-2025,2.6.1,4.1 and up
+Test Application 10241,ENTERTAINMENT,4.6,64700,36M,"5,000+",Free,0,Mature 17+,SHOPPING,April-5-2025,3.2.2,4.1 and up
+Test Application 10242,EVENTS,3.9,40921,32M,"500,000+",Free,0,Everyone 10+,SHOPPING,April-16-2025,1.7.7,6.0 and up
+Test Application 10243,EVENTS,5.0,33870,29M,"1,000+",Paid,0,Everyone 10+,ENTERTAINMENT,January-19-2025,2.0.8,8.0 and up
+Test Application 10244,PERSONALIZATION,3.8,71643,37M,"10,000+",Free,0,Mature 17+,ART_AND_DESIGN,February-15-2025,3.2.6,4.1 and up
+Test Application 10245,EVENTS,3.7,39007,44M,500+,Free,0,Everyone 10+,NEWS_AND_MAGAZINES,May-6-2025,5.4.8,6.0 and up
+Test Application 10246,DATING,4.1,77821,85M,100+,Free,0,Mature 17+,WEATHER,March-20-2025,3.3.6,6.0 and up
+Test Application 10247,COMMUNICATION,3.5,1082,88M,"50,000+",Free,0,Everyone,EVENTS,February-7-2025,1.7.2,4.1 and up
+Test Application 10248,WEATHER,4.7,1346,73M,"10,000+",Free,0,Everyone,WEATHER,March-21-2025,3.7.8,5.0 and up
+Test Application 10249,LIFESTYLE,4.1,51049,61M,"50,000+",Free,0,Everyone 10+,BOOKS_AND_REFERENCE,February-15-2025,3.3.0,6.0 and up
+Test Application 10250,COMICS,4.5,56890,57M,500+,Paid,0,Teen,LIBRARIES_AND_DEMO,May-7-2025,2.9.7,8.0 and up
