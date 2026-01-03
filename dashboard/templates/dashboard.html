@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLOps Dashboard - Meilleur Modèle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #1e3c72;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .refresh-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .refresh-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2::before {
+            content: '📊';
+            font-size: 1.3em;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .status.deployed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .metric-value {
+            color: #1e3c72;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .metric-value.good {
+            color: #28a745;
+        }
+        
+        .metric-value.medium {
+            color: #ffc107;
+        }
+        
+        .metric-value.bad {
+            color: #dc3545;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e9ecef;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: width 0.5s ease;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .comparison-table th {
+            background: #f8f9fa;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+        
+        .winner {
+            background: #d4edda !important;
+            font-weight: bold;
+        }
+        
+        .history {
+            max-height: 300px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .history-line {
+            padding: 5px;
+            margin: 2px 0;
+            border-left: 3px solid #667eea;
+            padding-left: 10px;
+        }
+        
+        .timestamp {
+            color: #666;
+            font-size: 0.85em;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 MLOps Dashboard</h1>
+            <p class="subtitle">Résultats du Meilleur Modèle Déployé</p>
+            <button class="refresh-btn" onclick="refreshData()">🔄 Rafraîchir</button>
+        </div>
+        
+        <div class="grid">
+            <!-- Carte Statut du Modèle -->
+            <div class="card">
+                <h2>Modèle en Production</h2>
+                
+                {% if model.deployed %}
+                <div class="status deployed">✅ Déployé</div>
+                {% else %}
+                <div class="status pending">⏳ En Attente</div>
+                {% endif %}
+                
+                <div class="metric-row">
+                    <span class="metric-label">Type</span>
+                    <span class="metric-value">{{ model.model_type }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Taille</span>
+                    <span class="metric-value">{{ model.size }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Déployé le</span>
+                    <span class="metric-value">{{ model.deployed_at }}</span>
+                </div>
+                
+                {% if model.n_estimators %}
+                <div class="metric-row">
+                    <span class="metric-label">N° Arbres</span>
+                    <span class="metric-value">{{ model.n_estimators }}</span>
+                </div>
+                {% endif %}
+                
+                {% if model.max_depth %}
+                <div class="metric-row">
+                    <span class="metric-label">Profondeur Max</span>
+                    <span class="metric-value">{{ model.max_depth }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <!-- Carte Métriques -->
+            <div class="card">
+                <h2>Métriques de Performance</h2>
+                
+                {% if model.metrics %}
+                <div class="metric-row">
+                    <span class="metric-label">Accuracy</span>
+                    <span class="metric-value {% if model.metrics.accuracy >= 0.85 %}good{% elif model.metrics.accuracy >= 0.75 %}medium{% else %}bad{% endif %}">
+                        {{ "%.2f%%"|format(model.metrics.accuracy * 100) }}
+                    </span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ model.metrics.accuracy * 100 }}%">
+                        {{ "%.0f%%"|format(model.metrics.accuracy * 100) }}
+                    </div>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Precision</span>
+                    <span class="metric-value">{{ "%.2f%%"|format(model.metrics.precision * 100) }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Recall</span>
+                    <span class="metric-value">{{ "%.2f%%"|format(model.metrics.recall * 100) }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">F1-Score</span>
+                    <span class="metric-value">{{ "%.2f%%"|format(model.metrics.f1_score * 100) }}</span>
+                </div>
+                {% else %}
+                <p style="color: #666; text-align: center; margin-top: 20px;">
+                    Aucune métrique disponible
+                </p>
+                {% endif %}
+            </div>
+            
+            <!-- Carte Données -->
+            <div class="card">
+                <h2>Données d'Entraînement</h2>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Total Applications</span>
+                    <span class="metric-value">{{ "{:,}".format(data.total_apps) }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Catégories</span>
+                    <span class="metric-value">{{ data.categories }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Dernière MAJ</span>
+                    <span class="metric-value" style="font-size: 0.9em;">{{ data.last_updated }}</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span class="metric-label">Seuil Réentraînement</span>
+                    <span class="metric-value">100 apps</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Comparaison des Modèles -->
+        {% if comparison.has_both %}
+        <div class="card" style="margin-bottom: 30px;">
+            <h2>⚖️ Comparaison des Modèles</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Métrique</th>
+                        <th>Production</th>
+                        <th>Candidat</th>
+                        <th>Gagnant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr {% if comparison.winner == 'production' and comparison.production.accuracy > comparison.candidate.accuracy %}class="winner"{% endif %}>
+                        <td>Accuracy</td>
+                        <td>{{ "%.2f%%"|format(comparison.production.accuracy * 100) }}</td>
+                        <td>{{ "%.2f%%"|format(comparison.candidate.accuracy * 100) }}</td>
+                        <td>
+                            {% if comparison.production.accuracy > comparison.candidate.accuracy %}
+                            🏆 Production
+                            {% else %}
+                            🏆 Candidat
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Precision</td>
+                        <td>{{ "%.2f%%"|format(comparison.production.precision * 100) }}</td>
+                        <td>{{ "%.2f%%"|format(comparison.candidate.precision * 100) }}</td>
+                        <td>
+                            {% if comparison.production.precision > comparison.candidate.precision %}
+                            🏆 Production
+                            {% else %}
+                            🏆 Candidat
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recall</td>
+                        <td>{{ "%.2f%%"|format(comparison.production.recall * 100) }}</td>
+                        <td>{{ "%.2f%%"|format(comparison.candidate.recall * 100) }}</td>
+                        <td>
+                            {% if comparison.production.recall > comparison.candidate.recall %}
+                            🏆 Production
+                            {% else %}
+                            🏆 Candidat
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>F1-Score</td>
+                        <td>{{ "%.2f%%"|format(comparison.production.f1_score * 100) }}</td>
+                        <td>{{ "%.2f%%"|format(comparison.candidate.f1_score * 100) }}</td>
+                        <td>
+                            {% if comparison.production.f1_score > comparison.candidate.f1_score %}
+                            🏆 Production
+                            {% else %}
+                            🏆 Candidat
+                            {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        
+        <p class="timestamp" id="lastUpdate">
+            Dernière mise à jour: {{ "now"|datetime }}
+        </p>
+    </div>
+    
+    <script>
+        function refreshData() {
+            location.reload();
+        }
+        
+        // Auto-refresh toutes les 30 secondes
+        setInterval(() => {
+            document.getElementById('lastUpdate').textContent = 
+                'Dernière mise à jour: ' + new Date().toLocaleString('fr-FR');
+        }, 30000);
+    </script>
+</body>
+</html>
