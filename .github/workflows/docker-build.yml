@@ -190,18 +190,23 @@ jobs:
         pattern: '*'
         merge-multiple: true
     
-    - name: � List downloaded files
+    - name: 🔧 Reorganize files
       run: |
         echo "Fichiers téléchargés:"
         ls -lah
         echo "---"
+        echo "Création de la structure models/"
+        mkdir -p models
+        mv *.pkl models/ 2>/dev/null || true
+        mv *.json models/ 2>/dev/null || true
+        echo "Structure finale:"
         find . -type f
     
     - name: 📤 Upload final artifacts
       uses: actions/upload-artifact@v4
       with:
         name: ml-pipeline-complete-outputs
-        path: .
+        path: models/
         retention-days: 7
     
     - name: 🎉 Success
