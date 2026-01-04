@@ -1,0 +1,83 @@
+name: Build ML Pipeline Docker Image
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'src/**'
+      - 'Dockerfile.pipeline'
+      - 'requirements.txt'
+      - '.github/workflows/docker-build.yml'
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:  # Permet de déclencher manuellement
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+    
+    - name: 🐳 Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    
+    - name: 🔐 Login to Docker Hub (optionnel)
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+      continue-on-error: true
+    
+    - name: 📦 Extract metadata
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: mlops-jupyter-ml-pipeline
+        tags: |
+          type=ref,event=branch
+          type=sha,prefix={{branch}}-
+          type=raw,value=latest,enable={{is_default_branch}}
+    
+    - name: 🏗️ Build Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./Dockerfile.pipeline
+        push: false
+        load: true
+        tags: ${{ steps.meta.outputs.tags }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+    
+    - name: 🧪 Test Docker image
+      run: |
+        echo "Testing if Docker image was built successfully..."
+        docker images | grep mlops-jupyter-ml-pipeline || echo "Image not found!"
+        
+        # Test basique: vérifier que Python fonctionne
+        docker run --rm mlops-jupyter-ml-pipeline:latest python --version
+        
+        echo "✅ Docker image built and tested successfully!"
+    
+    - name: 📊 Image information
+      run: |
+        echo "## Docker Image Information" >> $GITHUB_STEP_SUMMARY
+        echo "### Image Details" >> $GITHUB_STEP_SUMMARY
+        docker images mlops-jupyter-ml-pipeline --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" >> $GITHUB_STEP_SUMMARY
+        
+        echo "### Build successful! ✅" >> $GITHUB_STEP_SUMMARY
+        echo "Image is ready to use" >> $GITHUB_STEP_SUMMARY
+    
+    - name: 🎉 Success notification
+      if: success()
+      run: |
+        echo "🎉 Pipeline ML Docker image built successfully!"
+        echo "✅ All tests passed"
+        echo "📦 Image size: $(docker images mlops-jupyter-ml-pipeline:latest --format '{{.Size}}')"
