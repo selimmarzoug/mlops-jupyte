@@ -1,99 +1,128 @@
-# 🚀 GitHub Actions - CI/CD Pipeline
+# 🚀 GitHub Actions - Pipeline ML Complet
 
-Ce dossier contient les workflows GitHub Actions pour automatiser le build et les tests du pipeline ML.
+Ce dossier contient le workflow GitHub Actions pour automatiser l'intégralité du pipeline MLOps.
 
-## 📋 Workflows Disponibles
+## 📋 Workflow Unifié
 
-### 1. 🐳 Build ML Pipeline Docker Image (`docker-build.yml`)
+### 🎯 ML Pipeline Complete - Train + Docker Build (`docker-build.yml`)
+
+**Un seul workflow qui fait TOUT:**
+
+1. 🤖 **Entraîne les modèles ML** (RandomForest, GradientBoosting, LogisticRegression)
+2. 📊 **Compare et sélectionne le meilleur**
+3. 💾 **Génère les fichiers** (model.pkl, métriques, déploiement GCP)
+4. 🐳 **Construit l'image Docker**
+5. 🧪 **Teste l'image Docker**
+6. 📤 **Upload les artifacts**
 
 **Déclenchement:**
 - Push sur `main` ou `master`
-- Modification des fichiers: `src/**`, `Dockerfile.pipeline`, `requirements.txt`
+- Modification des fichiers: `src/**`, `data/**`, `Dockerfile.pipeline`, `requirements.txt`
 - Manuellement via l'interface GitHub
 
-**Actions:**
-- ✅ Construction de l'image Docker
-- ✅ Tests de l'image
-- ✅ Utilisation du cache pour builds rapides
-- ✅ Affichage de la taille de l'image
+**Durée:** ~10-15 minutes
 
-**Utilisation manuelle:**
+## 🎬 Utilisation Manuelle
+
 1. Aller sur GitHub → Actions
-2. Sélectionner "Build ML Pipeline Docker Image"
+2. Sélectionner "ML Pipeline Complete - Train + Docker Build"
 3. Cliquer sur "Run workflow"
+4. Sélectionner la branche "main"
+5. Cliquer "Run workflow"
 
-### 2. 🧪 Test ML Pipeline (`test-pipeline.yml`)
+## 📊 Ce que fait le workflow
 
-**Déclenchement:**
-- Push sur `main` ou `master`
-- Pull requests
-- Manuellement
+```
+┌──────────────────────┐
+│   ÉTAPE 1: ML        │
+│   Entraînement       │ ✅ 3 modèles comparés
+│   - RandomForest     │ ✅ Meilleur sélectionné
+│   - GradientBoosting│ ✅ Métriques calculées
+│   - LogisticReg     │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│   ÉTAPE 2: Files     │
+│   Vérification       │ ✅ model.pkl
+│                      │ ✅ production_metrics.json
+│                      │ ✅ deployment_gcp/
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│   ÉTAPE 3: Docker    │
+│   Build & Test       │ ✅ Image construite
+│                      │ ✅ Tests passés
+│                      │ ✅ Prête à déployer
+└──────────────────────┘
+```
 
-**Actions:**
-- ✅ Installation des dépendances Python
-- ✅ Exécution du pipeline ML
-- ✅ Vérification des fichiers générés
-- ✅ Upload des artifacts (modèles, métriques)
-- ✅ Services PostgreSQL pour MLflow
+## 📦 Artifacts Générés
 
-**Artifacts générés:**
-- `models/model.pkl` - Modèle entraîné
-- `models/production_metrics.json` - Métriques du modèle
-- `deployment_gcp/` - Fichiers de déploiement GCP
+Chaque exécution génère des artifacts téléchargeables:
 
-## 🔧 Configuration
+```
+ml-pipeline-complete-outputs.zip
+├── models/
+│   ├── model.pkl              (Modèle entraîné)
+│   └── production_metrics.json (Métriques)
+└── deployment_gcp/
+    ├── app.py                 (Application Flask)
+    ├── Dockerfile             (Image GCP)
+    ├── deploy.sh              (Script déploiement)
+    └── README.md              (Documentation)
+```
 
-### Secrets GitHub (Optionnels)
-
-Pour pusher l'image sur Docker Hub, configurez ces secrets:
-
-1. Aller sur GitHub → Settings → Secrets and variables → Actions
-2. Ajouter:
-   - `DOCKER_USERNAME`: Votre nom d'utilisateur Docker Hub
-   - `DOCKER_PASSWORD`: Votre token Docker Hub
+**Téléchargement:**
+1. Aller sur GitHub → Actions
+2. Cliquer sur une exécution réussie
+3. Descendre à "Artifacts"
+4. Télécharger `ml-pipeline-complete-outputs`
 
 ## 📊 Badges de Statut
 
-Ajoutez ces badges dans votre README principal:
+Ajoutez ce badge dans votre README principal:
 
 ```markdown
-![Build Docker](https://github.com/VOTRE-USERNAME/VOTRE-REPO/actions/workflows/docker-build.yml/badge.svg)
-![Test Pipeline](https://github.com/VOTRE-USERNAME/VOTRE-REPO/actions/workflows/test-pipeline.yml/badge.svg)
+![ML Pipeline](https://github.com/VOTRE-USERNAME/VOTRE-REPO/actions/workflows/docker-build.yml/badge.svg)
 ```
 
-## 🚦 Statut des Workflows
+## 🚦 Indicateurs de Succès
 
-Les workflows s'affichent dans l'onglet **Actions** de votre repository GitHub.
+### Dans les logs, vous verrez:
 
-### Indicateurs de succès:
-- ✅ **Vert** - Build/Test réussi
-- ❌ **Rouge** - Échec (voir les logs)
-- 🟡 **Jaune** - En cours d'exécution
-
-## 📈 Utilisation
-
-### Vérifier le statut des builds:
-
-```bash
-# Cloner le repo
-git clone https://github.com/votre-username/mlops-jupyter.git
-cd mlops-jupyter
-
-# Voir l'historique des commits
-git log --oneline -n 5
-
-# Pousser des changements (déclenche les workflows)
-git add .
-git commit -m "Update pipeline"
-git push origin main
 ```
+═══════════════════════════════════════════════════════════════
+🤖 ÉTAPE 1: ENTRAÎNEMENT DES MODÈLES ML
+═══════════════════════════════════════════════════════════════
+✅ Données chargées: 9878 applications
+📊 RandomForest: Accuracy 1.0000
+📊 GradientBoosting: Accuracy 1.0000
+📊 LogisticRegression: Accuracy 0.7890
+🏆 MEILLEUR MODÈLE: RandomForest
+✅ ÉTAPE 1 TERMINÉE
 
-### Télécharger les artifacts:
+═══════════════════════════════════════════════════════════════
+📂 ÉTAPE 2: VÉRIFICATION DES FICHIERS GÉNÉRÉS
+═══════════════════════════════════════════════════════════════
+✅ Modèle créé: models/model.pkl (137KB)
+✅ Métriques créées
+✅ Dossier GCP créé
+✅ ÉTAPE 2 TERMINÉE
 
-1. Aller sur GitHub → Actions
-2. Cliquer sur un workflow réussi
-3. Descendre à "Artifacts"
-4. Télécharger `pipeline-outputs`
+═══════════════════════════════════════════════════════════════
+🐳 ÉTAPE 3: CONSTRUCTION DE L'IMAGE DOCKER
+═══════════════════════════════════════════════════════════════
+🏗️ Construction de l'image avec docker-compose...
+✅ ÉTAPE 3 TERMINÉE
+
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║     🎉 PIPELINE COMPLET RÉUSSI! 🎉                          ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+```
 
 ## 🔍 Dépannage
 
