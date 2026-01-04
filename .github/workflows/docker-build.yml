@@ -201,9 +201,7 @@ jobs:
       with:
         name: ml-pipeline-complete-outputs
         path: |
-          models/*.pkl
-          models/*.json
-          deployment_gcp/
+          models/
         retention-days: 7
     
     - name: 🎉 Success
