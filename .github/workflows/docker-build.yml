@@ -34,7 +34,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         ports:
-          - 5432:5432
+          - 5433:5432
     
     steps:
     - name: 📥 Checkout code
@@ -53,6 +53,7 @@ jobs:
     
     - name: 📊 Step 1/3 - Train ML Models
       run: |
+        echo "::group::🤖 ÉTAPE 1/3: ENTRAÎNEMENT DES MODÈLES ML"
         echo "═══════════════════════════════════════════════════════════════"
         echo "🤖 ÉTAPE 1: ENTRAÎNEMENT DES MODÈLES ML"
         echo "═══════════════════════════════════════════════════════════════"
@@ -70,9 +71,11 @@ jobs:
         
         echo ""
         echo "✅ ÉTAPE 1 TERMINÉE"
+        echo "::endgroup::"
     
     - name: 🔍 Step 2/3 - Verify Generated Files
       run: |
+        echo "::group::📂 ÉTAPE 2/3: VÉRIFICATION DES FICHIERS"
         echo "═══════════════════════════════════════════════════════════════"
         echo "📂 ÉTAPE 2: VÉRIFICATION DES FICHIERS GÉNÉRÉS"
         echo "═══════════════════════════════════════════════════════════════"
@@ -111,9 +114,11 @@ jobs:
         
         echo ""
         echo "✅ ÉTAPE 2 TERMINÉE"
+        echo "::endgroup::"
     
     - name: 🐳 Step 3/3 - Build Docker Image
       run: |
+        echo "::group::🐳 ÉTAPE 3/3: CONSTRUCTION IMAGE DOCKER"
         echo "═══════════════════════════════════════════════════════════════"
         echo "🐳 ÉTAPE 3: CONSTRUCTION DE L'IMAGE DOCKER"
         echo "═══════════════════════════════════════════════════════════════"
@@ -127,9 +132,11 @@ jobs:
         
         echo ""
         echo "✅ ÉTAPE 3 TERMINÉE"
+        echo "::endgroup::"
     
     - name: 🧪 Test Docker Image
       run: |
+        echo "::group::🧪 TESTS DE L'IMAGE DOCKER"
         echo "═══════════════════════════════════════════════════════════════"
         echo "🧪 TEST DE L'IMAGE DOCKER"
         echo "═══════════════════════════════════════════════════════════════"
@@ -150,9 +157,11 @@ jobs:
         
         echo ""
         echo "✅ TOUS LES TESTS PASSÉS"
+        echo "::endgroup::"
     
     - name: 📊 Final Summary
       run: |
+        echo "::group::📊 RÉSUMÉ FINAL"
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "## ✅ Pipeline Complet Terminé" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
@@ -167,6 +176,7 @@ jobs:
         echo "### 📦 Image Docker" >> $GITHUB_STEP_SUMMARY
         echo "- **Taille:** $IMAGE_SIZE" >> $GITHUB_STEP_SUMMARY
         echo "- **Statut:** ✅ Prête à l'emploi" >> $GITHUB_STEP_SUMMARY
+        echo "::endgroup::"
     
     - name: 📤 Upload Artifacts
       uses: actions/upload-artifact@v4
@@ -182,6 +192,7 @@ jobs:
     - name: 🎉 Success Notification
       if: success()
       run: |
+        echo "::group::🎉 SUCCÈS"
         echo ""
         echo "╔═══════════════════════════════════════════════════════════════╗"
         echo "║                                                               ║"
@@ -196,3 +207,4 @@ jobs:
         echo ""
         echo "📦 Artifacts disponibles au téléchargement"
         echo "🐳 Image Docker prête pour déploiement"
+        echo "::endgroup::"
