@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Success Predictor - Google Play Store Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0e27;
+            color: #e2e8f0;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(88, 166, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 50% 20%, rgba(172, 100, 247, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 680px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-section {
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            color: #cbd5e1;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 16px 18px 16px 50px;
+            background: rgba(30, 41, 59, 0.6);
+            border: 2px solid rgba(148, 163, 184, 0.2);
+            border-radius: 14px;
+            font-size: 16px;
+            color: #e2e8f0;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Inter', sans-serif;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(30, 41, 59, 0.8);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+        }
+
+        input[type="number"]::placeholder {
+            color: #64748b;
+        }
+
+        .button-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        button {
+            padding: 16px 28px;
+            border: none;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-predict {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-predict:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-predict:active {
+            transform: translateY(0);
+        }
+
+        .btn-reload {
+            background: rgba(51, 65, 85, 0.8);
+            color: #cbd5e1;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .btn-reload:hover {
+            background: rgba(71, 85, 105, 0.8);
+            border-color: rgba(148, 163, 184, 0.3);
+        }
+
+        .result-card {
+            margin-top: 32px;
+            padding: 32px;
+            border-radius: 20px;
+            display: none;
+            animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 2px solid;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .result-card.success {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .result-card.failure {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.15) 100%);
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .result-icon {
+            font-size: 48px;
+            line-height: 1;
+        }
+
+        .result-text h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .result-text p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .confidence-bar {
+            margin-top: 20px;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            height: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            border-radius: 12px;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+
+        .confidence-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .confidence-text {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .loader {
+            display: none;
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .spinner-wrapper {
+            display: inline-block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+
+        .spinner-wrapper div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        }
+
+        .spinner-wrapper div:nth-child(2) {
+            border-top-color: #764ba2;
+            animation-delay: -0.4s;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .info-banner {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+        }
+
+        .info-banner p {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .info-banner strong {
+            color: #e2e8f0;
+        }
+
+        @media (max-width: 640px) {
+            .button-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 28px 20px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📊</div>
+            <h1>App Success Predictor</h1>
+            <p class="subtitle">Predict Google Play Store application success with ML</p>
+        </div>
+
+        <div class="card">
+            <div class="info-banner">
+                <p><strong>Model Status:</strong> {{ model_info }}</p>
+            </div>
+
+            <form id="predictionForm">
+                <div class="form-section">
+                    <label>Rating Score</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">⭐</span>
+                        <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" placeholder="4.5" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label>Reviews Count</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">💬</span>
+                        <input type="number" id="reviews" name="reviews" placeholder="10000" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label>Size (MB)</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">📦</span>
+                        <input type="number" id="size" name="size" step="0.1" placeholder="25.5" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label>Installs Count</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">📥</span>
+                        <input type="number" id="installs" name="installs" placeholder="100000" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <label>Price ($)</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">💰</span>
+                        <input type="number" id="price" name="price" step="0.01" min="0" placeholder="0.99" required>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="btn-predict">🚀 Predict Success</button>
+                    <button type="button" class="btn-reload" onclick="location.reload()">↻ Reset</button>
+                </div>
+            </form>
+
+            <div class="loader" id="loader">
+                <div class="spinner-wrapper">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="result-card" id="resultCard">
+                <div class="result-header">
+                    <div class="result-icon" id="resultIcon"></div>
+                    <div class="result-text">
+                        <h3 id="resultTitle"></h3>
+                        <p id="resultSubtitle"></p>
+                    </div>
+                </div>
+                <div class="confidence-bar">
+                    <div class="confidence-fill" id="confidenceFill"></div>
+                </div>
+                <div class="confidence-text" id="confidenceText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const loader = document.getElementById('loader');
+            const resultCard = document.getElementById('resultCard');
+            
+            loader.style.display = 'block';
+            resultCard.style.display = 'none';
+            
+            const formData = {
+                rating: parseFloat(document.getElementById('rating').value),
+                reviews: parseInt(document.getElementById('reviews').value),
+                size: parseFloat(document.getElementById('size').value),
+                installs: parseInt(document.getElementById('installs').value),
+                price: parseFloat(document.getElementById('price').value)
+            };
+            
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    displayResult(result);
+                }, 800);
+                
+            } catch (error) {
+                loader.style.display = 'none';
+                alert('Prediction error: ' + error.message);
+            }
+        });
+        
+        function displayResult(result) {
+            const resultCard = document.getElementById('resultCard');
+            const resultIcon = document.getElementById('resultIcon');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultSubtitle = document.getElementById('resultSubtitle');
+            const confidenceFill = document.getElementById('confidenceFill');
+            const confidenceText = document.getElementById('confidenceText');
+            
+            // Check if result is valid
+            if (!result || !result.success) {
+                alert('Prediction failed: ' + (result?.error || 'Unknown error'));
+                return;
+            }
+            
+            const success = result.prediction === 'Success';
+            
+            resultCard.className = 'result-card ' + (success ? 'success' : 'failure');
+            resultIcon.textContent = success ? '🎯' : '⚠️';
+            resultTitle.textContent = success ? 'Success Predicted' : 'Risk Detected';
+            resultSubtitle.textContent = success ? 
+                'This app has strong market potential' : 
+                'Market conditions may be challenging';
+            
+            // Ensure confidence is a valid number
+            const confidence = result.confidence ? Math.round(result.confidence) : 75;
+            confidenceFill.style.width = '0%';
+            confidenceText.textContent = `Confidence Level: ${confidence}%`;
+            
+            resultCard.style.display = 'block';
+            
+            setTimeout(() => {
+                confidenceFill.style.width = confidence + '%';
+            }, 100);
+        }
+    </script>
+</body>
+</html>
