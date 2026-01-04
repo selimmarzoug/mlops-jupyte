@@ -196,12 +196,18 @@ jobs:
         pattern: '*'
         merge-multiple: true
     
+    - name: � List downloaded files
+      run: |
+        echo "Fichiers téléchargés:"
+        ls -lah
+        echo "---"
+        find . -type f
+    
     - name: 📤 Upload final artifacts
       uses: actions/upload-artifact@v4
       with:
         name: ml-pipeline-complete-outputs
-        path: |
-          models/
+        path: .
         retention-days: 7
     
     - name: 🎉 Success
