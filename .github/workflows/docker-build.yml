@@ -271,9 +271,13 @@ jobs:
         echo "Déploiement sur Cloud Run..."
         cd prediction_interface
         
+        # Build with --suppress-logs to avoid VPC-SC issues
         gcloud builds submit \
           --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/prediction-app \
-          --project=${{ secrets.GCP_PROJECT_ID }}
+          --project=${{ secrets.GCP_PROJECT_ID }} \
+          --suppress-logs
+        
+        echo "Build terminé, déploiement..."
         
         gcloud run deploy prediction-app \
           --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/prediction-app \
