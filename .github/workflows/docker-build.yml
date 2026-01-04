@@ -271,13 +271,31 @@ jobs:
         echo "Déploiement sur Cloud Run..."
         cd prediction_interface
         
-        # Build with --suppress-logs to avoid VPC-SC issues
-        gcloud builds submit \
+        # Build async and wait
+        BUILD_ID=$(gcloud builds submit \
           --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/prediction-app \
           --project=${{ secrets.GCP_PROJECT_ID }} \
-          --suppress-logs
+          --async \
+          --format='value(id)')
         
-        echo "Build terminé, déploiement..."
+        echo "Build ID: $BUILD_ID"
+        echo "Attente du build..."
+        
+        # Wait for build to complete (max 10 min)
+        for i in {1..60}; do
+          STATUS=$(gcloud builds describe $BUILD_ID --project=${{ secrets.GCP_PROJECT_ID }} --format='value(status)')
+          echo "Status: $STATUS"
+          if [ "$STATUS" = "SUCCESS" ]; then
+            echo "Build réussi!"
+            break
+          elif [ "$STATUS" = "FAILURE" ] || [ "$STATUS" = "CANCELLED" ]; then
+            echo "Build échoué!"
+            exit 1
+          fi
+          sleep 10
+        done
+        
+        echo "Déploiement..."
         
         gcloud run deploy prediction-app \
           --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/prediction-app \
